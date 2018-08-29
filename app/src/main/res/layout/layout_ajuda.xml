@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="womm.quality_services.app.activity_ajuda">
+
+<android.support.v7.widget.Toolbar
+    android:id="@+id/tbAjuToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="@color/colorPrimary"
+    android:elevation="4dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <ImageView
+        android:id="@+id/ivAjuArrowback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/ivGeralQualityServicesDesc"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08"
+        app:srcCompat="@drawable/ic_arrowbackwhite" />
+
+    <TextView
+        android:id="@+id/tvAjuTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:text="@string/app_name"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="65dp" />
+
+</android.support.v7.widget.Toolbar>
+
+<TextView
+    android:id="@+id/tvAjuTitulo1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="20dp"
+    android:text="@string/tvAjuTituloLabel"
+    android:textColor="#080808"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.045"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tbAjuToolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvAjuTitulo1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" >
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvAjuBuscrap"
+                android:layout_width="match_parent"
+                android:minHeight="60dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#170a5920"
+                app:cardCornerRadius="2dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvAjuBuscrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_centerInParent="true"
+                        android:text="@string/tvAjuBuscrapLabel"
+                        android:textColor="#07200e"
+                        android:textSize="16sp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/tvAjuBuscrapR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#303030"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/cvAjuBuscrap"
+                app:layout_constraintStart_toStartOf="@+id/cvAjuBuscrap"
+                app:layout_constraintEnd_toEndOf="@+id/cvAjuBuscrap"
+                android:text="@string/tvAjuBuscrapRLabel" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvAjuBuscava"
+                android:layout_width="match_parent"
+                android:minHeight="60dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#170a5920"
+                app:cardCornerRadius="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvAjuBuscrapR" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvAjuBuscava"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_centerInParent="true"
+                        android:text="@string/tvAjuBuscavaLabel"
+                        android:textColor="#07200e"
+                        android:textSize="16sp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/tvAjuBuscavaR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#303030"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/cvAjuBuscava"
+                app:layout_constraintStart_toStartOf="@+id/cvAjuBuscava"
+                app:layout_constraintEnd_toEndOf="@+id/cvAjuBuscava"
+                android:text="@string/tvAjuBuscavaRLabel" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvAjuAvaliar"
+                android:layout_width="match_parent"
+                android:minHeight="60dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#170a5920"
+                app:cardCornerRadius="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvAjuBuscavaR" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvAjuAvaliar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_centerInParent="true"
+                        android:text="@string/tvAjuAvaliarLabel"
+                        android:textColor="#07200e"
+                        android:textSize="16sp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/tvAjuAvaliarR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#303030"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/cvAjuAvaliar"
+                app:layout_constraintStart_toStartOf="@+id/cvAjuAvaliar"
+                app:layout_constraintEnd_toEndOf="@+id/cvAjuAvaliar"
+                android:text="@string/tvAjuAvaliarRLabel" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvAjuEditperf"
+                android:layout_width="match_parent"
+                android:minHeight="60dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#170a5920"
+                app:cardCornerRadius="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvAjuAvaliarR" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvAjuEditperf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_centerInParent="true"
+                        android:text="@string/tvAjuEditperfLabel"
+                        android:textColor="#07200e"
+                        android:textSize="16sp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/tvAjuEditperfR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#303030"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/cvAjuEditperf"
+                app:layout_constraintStart_toStartOf="@+id/cvAjuEditperf"
+                app:layout_constraintEnd_toEndOf="@+id/cvAjuEditperf"
+                android:text="@string/tvAjuEditperfRLabel" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvAjuContato"
+                android:layout_width="match_parent"
+                android:minHeight="60dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#170a5920"
+                app:cardCornerRadius="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvAjuEditperfR" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvAjuContato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_centerInParent="true"
+                        android:text="@string/tvAjuContatoLabel"
+                        android:textColor="#07200e"
+                        android:textSize="16sp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/tvAjuContatoR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#303030"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/cvAjuContato"
+                app:layout_constraintStart_toStartOf="@+id/cvAjuContato"
+                app:layout_constraintEnd_toEndOf="@+id/cvAjuContato"
+                android:text="@string/tvAjuContatoRLabel" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvAjuRanking"
+                android:layout_width="match_parent"
+                android:minHeight="60dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#170a5920"
+                app:cardCornerRadius="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvAjuContatoR" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvAjuRanking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_centerInParent="true"
+                        android:text="@string/tvAjuRankingLabel"
+                        android:textColor="#07200e"
+                        android:textSize="16sp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/tvAjuRankingR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#303030"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/cvAjuRanking"
+                app:layout_constraintStart_toStartOf="@+id/cvAjuRanking"
+                app:layout_constraintEnd_toEndOf="@+id/cvAjuRanking"
+                android:text="@string/tvAjuRankingRLabel" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvAjuRankingR"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

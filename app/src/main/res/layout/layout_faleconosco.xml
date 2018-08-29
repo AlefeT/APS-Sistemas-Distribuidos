@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="womm.quality_services.app.activity_faleconosco">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbFCToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:id="@+id/ivFCArrowback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/ivGeralQualityServicesDesc"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.08"
+            app:srcCompat="@drawable/ic_arrowbackwhite" />
+
+        <TextView
+            android:id="@+id/tvFCTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitCenter"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="65dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvFCTitulo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tvFCTitulo1Label"
+        android:textColor="#080808"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbFCToolbar" />
+
+
+            <!-- linha 1, três icones de cima -->
+            <ImageView
+                android:id="@+id/ivFCTelefone"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toStartOf="@id/ivFCEmail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFCTitulo1"
+                app:layout_constraintBottom_toTopOf="@id/tvFCTelefone"
+                app:srcCompat="@drawable/logo_tel"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <TextView
+                android:id="@+id/tvFCTelefone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/tvFCTelefoneLabel"
+                app:layout_constraintEnd_toEndOf="@+id/ivFCTelefone"
+                app:layout_constraintStart_toStartOf="@+id/ivFCTelefone"
+                app:layout_constraintTop_toBottomOf="@+id/ivFCTelefone"
+                app:layout_constraintBottom_toTopOf="@id/ivFCFace" />
+
+            <ImageView
+                android:id="@+id/ivFCEmail"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toStartOf="@+id/ivFCWhats"
+                app:layout_constraintStart_toEndOf="@+id/ivFCTelefone"
+                app:layout_constraintTop_toBottomOf="@id/tvFCTitulo1"
+                app:layout_constraintBottom_toTopOf="@id/tvFCEmail"
+                app:srcCompat="@drawable/logo_email"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <TextView
+                android:id="@+id/tvFCEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/tvFCEmailLabel"
+                app:layout_constraintEnd_toEndOf="@+id/ivFCEmail"
+                app:layout_constraintStart_toStartOf="@+id/ivFCEmail"
+                app:layout_constraintTop_toBottomOf="@+id/ivFCEmail"
+                app:layout_constraintBottom_toTopOf="@id/ivFCSite" />
+
+            <ImageView
+                android:id="@+id/ivFCWhats"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivFCEmail"
+                app:layout_constraintTop_toBottomOf="@id/tvFCTitulo1"
+                app:layout_constraintBottom_toTopOf="@id/tvFCWhats"
+                app:srcCompat="@drawable/logo_whatsapp"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <TextView
+                android:id="@+id/tvFCWhats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/tvFCWhatsLabel"
+                app:layout_constraintEnd_toEndOf="@+id/ivFCWhats"
+                app:layout_constraintStart_toStartOf="@+id/ivFCWhats"
+                app:layout_constraintTop_toBottomOf="@+id/ivFCWhats"
+                app:layout_constraintBottom_toTopOf="@id/ivFCChat" />
+
+            <!-- linha 2, três icones do meio -->
+            <ImageView
+                android:id="@+id/ivFCFace"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@id/ivFCSite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFCTelefone"
+                app:layout_constraintBottom_toTopOf="@id/tvFCFace"
+                app:srcCompat="@drawable/logo_facebook"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <TextView
+                android:id="@+id/tvFCFace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/tvFCFaceLabel"
+                app:layout_constraintEnd_toEndOf="@+id/ivFCFace"
+                app:layout_constraintStart_toStartOf="@+id/ivFCFace"
+                app:layout_constraintTop_toBottomOf="@+id/ivFCFace" />
+
+            <ImageView
+                android:id="@+id/ivFCSite"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                app:layout_constraintEnd_toStartOf="@+id/ivFCChat"
+                app:layout_constraintStart_toEndOf="@+id/ivFCFace"
+                app:layout_constraintTop_toBottomOf="@id/tvFCEmail"
+                app:layout_constraintBottom_toTopOf="@id/tvFCSite"
+                app:srcCompat="@drawable/logo_site"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <TextView
+                android:id="@+id/tvFCSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/tvFCSiteLabel"
+                app:layout_constraintEnd_toEndOf="@+id/ivFCSite"
+                app:layout_constraintStart_toStartOf="@+id/ivFCSite"
+                app:layout_constraintTop_toBottomOf="@+id/ivFCSite" />
+
+            <ImageView
+                android:id="@+id/ivFCChat"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivFCSite"
+                app:layout_constraintTop_toBottomOf="@id/tvFCWhats"
+                app:layout_constraintBottom_toTopOf="@id/tvFCChat"
+                app:srcCompat="@drawable/logo_chat"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <TextView
+                android:id="@+id/tvFCChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/tvFCChatLabel"
+                app:layout_constraintEnd_toEndOf="@+id/ivFCChat"
+                app:layout_constraintStart_toStartOf="@+id/ivFCChat"
+                app:layout_constraintTop_toBottomOf="@+id/ivFCChat" />
+
+
+</android.support.constraint.ConstraintLayout>

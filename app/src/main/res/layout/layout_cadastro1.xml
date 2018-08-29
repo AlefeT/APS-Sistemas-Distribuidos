@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="womm.quality_services.app.activity_cadastro1">
+
+<ImageView
+    android:id="@+id/ivCadSpeedyPay"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:contentDescription="@string/ivGeralQualityServicesDesc"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.08"
+    app:srcCompat="@drawable/logo_qs" />
+
+<TextView
+    android:id="@+id/tvCadNome"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="17dp"
+    android:text="@string/tvCadNomeLabel"
+    android:textColor="@color/colorPrimaryDark"
+    android:textColorLink="#004566"
+    android:textSize="15sp"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/etCadNome"
+    app:layout_constraintEnd_toEndOf="@+id/etCadNome"
+    app:layout_constraintStart_toStartOf="@+id/etCadNome"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0" />
+
+<EditText
+    android:id="@+id/etCadNome"
+    android:layout_width="0dp"
+    android:layout_height="32dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="8dp"
+    android:background="#26ffffff"
+    android:ems="10"
+    android:hint="@string/etCadNomeHint"
+    android:inputType="textPersonName"
+    android:textAllCaps="false"
+    android:textColor="#00172d"
+    android:textColorHint="#6400182e"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.341" />
+
+<TextView
+    android:id="@+id/tvCadCPF"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="17dp"
+    android:text="@string/tvCadCPFLabel"
+    android:textColor="@color/colorPrimaryDark"
+    android:textColorLink="#004566"
+    android:textSize="15sp"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/etCadCPF"
+    app:layout_constraintEnd_toEndOf="@+id/etCadCPF"
+    app:layout_constraintStart_toStartOf="@+id/etCadCPF"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0" />
+
+<EditText
+    android:id="@+id/etCadCPF"
+    android:layout_width="0dp"
+    android:layout_height="32dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="8dp"
+    android:background="#26ffffff"
+    android:ems="10"
+    android:hint="@string/etCadCPFHint"
+    android:inputType="number"
+    android:textColor="@color/colorPrimaryDark"
+    android:textColorHint="#6400182e"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.453" />
+
+<TextView
+    android:id="@+id/tvCadCelular"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="17dp"
+    android:text="@string/tvCadCelularLabel"
+    android:textColor="@color/colorPrimaryDark"
+    android:textColorLink="#004566"
+    android:textSize="15sp"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/etCadCelular"
+    app:layout_constraintEnd_toEndOf="@+id/etCadCelular"
+    app:layout_constraintStart_toStartOf="@+id/etCadCelular"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0" />
+
+<EditText
+    android:id="@+id/etCadCelular"
+    android:layout_width="0dp"
+    android:layout_height="32dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="8dp"
+    android:background="#26ffffff"
+    android:ems="10"
+    android:hint="@string/etCadCelularHint"
+    android:inputType="number"
+    android:textColor="@color/colorPrimaryDark"
+    android:textColorHint="#6400182e"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.565" />
+
+<TextView
+    android:id="@+id/tvCadEmail"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="17dp"
+    android:text="@string/tvCadEmailLabel"
+    android:textColor="@color/colorPrimaryDark"
+    android:textColorLink="#004566"
+    android:textSize="15sp"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/etCadEmail"
+    app:layout_constraintEnd_toEndOf="@+id/etCadEmail"
+    app:layout_constraintStart_toStartOf="@+id/etCadEmail"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0" />
+
+<EditText
+    android:id="@+id/etCadEmail"
+    android:layout_width="0dp"
+    android:layout_height="32dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="8dp"
+    android:background="#26ffffff"
+    android:ems="10"
+    android:hint="@string/etCadEmailHint"
+    android:inputType="textEmailAddress"
+    android:textColor="@color/colorPrimaryDark"
+    android:textColorHint="#6400182e"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.677" />
+
+<TextView
+    android:id="@+id/tvCadSenha"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="17dp"
+    android:text="@string/tvCadSenhaLabel"
+    android:textColor="@color/colorPrimaryDark"
+    android:textColorLink="#004566"
+    android:textSize="15sp"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/etCadSenha"
+    app:layout_constraintEnd_toEndOf="@+id/etCadSenha"
+    app:layout_constraintStart_toStartOf="@+id/etCadSenha"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0" />
+
+<EditText
+    android:id="@+id/etCadSenha"
+    android:layout_width="0dp"
+    android:layout_height="32dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="8dp"
+    android:background="#26ffffff"
+    android:ems="10"
+    android:hint="@string/etCadSenhaHint"
+    android:inputType="textPassword"
+    android:textColor="@color/colorPrimaryDark"
+    android:textColorHint="#6400182e"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.790" />
+
+<TextView
+    android:id="@+id/tvCadTermosPolitica"
+    android:layout_width="252dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="17dp"
+    android:text="@string/tvCadTermosPoliticaLabel"
+    android:textAlignment="center"
+    android:textColor="@color/colorPrimaryDark"
+    android:textColorLink="#004566"
+    android:textSize="12sp"
+
+    app:layout_constraintVertical_bias="0.964"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent" />
+
+<android.support.v7.widget.CardView
+    android:id="@+id/cvCadCadastrar"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="4dp"
+    app:cardBackgroundColor="#FF1BB1AA"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.910">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvCadCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/btCadCadastrarLabel"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+
+    <ProgressBar
+        android:id="@+id/pbCadastrando1"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.743" />
+
+</android.support.constraint.ConstraintLayout>

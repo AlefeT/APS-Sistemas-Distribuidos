@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="womm.quality_services.app.activity_principal">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbPriBarraSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/tvPriTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitCenter"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="65dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <!-- linha 0, vazio / logoQS / vazio -->
+    <ImageView
+        android:id="@+id/ivPriVoid1"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toStartOf="@id/ivPriLogoQS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbPriBarraSuperior"
+        app:srcCompat="@drawable/img_void"
+        android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+    <ImageView
+        android:id="@+id/ivPriLogoQS"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toStartOf="@id/ivPriVoid2"
+        app:layout_constraintStart_toEndOf="@id/ivPriVoid1"
+        app:layout_constraintTop_toBottomOf="@id/tbPriBarraSuperior"
+        app:srcCompat="@drawable/logo_qs"
+        android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+    <ImageView
+        android:id="@+id/ivPriVoid2"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivPriLogoQS"
+        app:layout_constraintTop_toBottomOf="@id/tbPriBarraSuperior"
+        app:srcCompat="@drawable/img_void"
+        android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+
+    <ScrollView
+        android:id="@+id/svPriIcons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPriLogoQS"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <!-- linha 1, três icones de cima -->
+            <ImageView
+                android:id="@+id/ivPriAvaliar"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toTopOf="@id/ivPriBuscaavancada"
+                app:layout_constraintEnd_toStartOf="@id/ivPriRanking"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo_avaliarhospital"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <ImageView
+                android:id="@+id/ivPriRanking"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toTopOf="@id/ivPriPerfil"
+                app:layout_constraintEnd_toStartOf="@+id/ivPriBuscarapida"
+                app:layout_constraintStart_toEndOf="@+id/ivPriAvaliar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo_ranking"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <ImageView
+                android:id="@+id/ivPriBuscarapida"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toTopOf="@id/ivPriFaleconosco"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivPriRanking"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo_buscarapida"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <!-- linha 2, três icones do meio -->
+            <ImageView
+                android:id="@+id/ivPriBuscaavancada"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintBottom_toTopOf="@id/ivPriVoid3"
+                app:layout_constraintEnd_toStartOf="@id/ivPriPerfil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivPriAvaliar"
+                app:srcCompat="@drawable/logo_buscaavancada"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <ImageView
+                android:id="@+id/ivPriPerfil"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintBottom_toTopOf="@id/ivPriAjuda"
+                app:layout_constraintEnd_toStartOf="@+id/ivPriFaleconosco"
+                app:layout_constraintStart_toEndOf="@+id/ivPriBuscaavancada"
+                app:layout_constraintTop_toBottomOf="@id/ivPriRanking"
+                app:srcCompat="@drawable/logo_perfil"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <ImageView
+                android:id="@+id/ivPriFaleconosco"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintBottom_toTopOf="@id/ivPriVoid4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivPriPerfil"
+                app:layout_constraintTop_toBottomOf="@id/ivPriBuscarapida"
+                app:srcCompat="@drawable/logo_faleconosco"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <!-- linha 3, três icones de baixo -->
+            <ImageView
+                android:id="@+id/ivPriVoid3"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivPriAjuda"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivPriBuscaavancada"
+                app:srcCompat="@drawable/img_void"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <ImageView
+                android:id="@+id/ivPriAjuda"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivPriVoid4"
+                app:layout_constraintStart_toEndOf="@+id/ivPriVoid3"
+                app:layout_constraintTop_toBottomOf="@id/ivPriPerfil"
+                app:srcCompat="@drawable/logo_ajuda"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+            <ImageView
+                android:id="@+id/ivPriVoid4"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivPriAjuda"
+                app:layout_constraintTop_toBottomOf="@id/ivPriFaleconosco"
+                app:srcCompat="@drawable/img_void"
+                android:contentDescription="@string/ivGeralQualityServicesDesc" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

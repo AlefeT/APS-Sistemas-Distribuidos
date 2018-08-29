@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="womm.quality_services.app.activity_avaliar" >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbAvaToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:id="@+id/ivAvaArrowback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/ivGeralQualityServicesDesc"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.08"
+            app:srcCompat="@drawable/ic_arrowbackwhite" />
+
+        <TextView
+            android:id="@+id/tvAvaTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitCenter"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="65dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvAvaTitulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tvAvaTituloLabel"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbAvaToolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvaTitulo2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAvaHospital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/tvAvaHospitalLabel"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/actvAvaHospital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:completionThreshold="3"
+                android:hint="@string/etAvaHospitalLabel"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvAvaData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/tvAvaDataLabel"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etAvaData"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:inputType="date"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvAvaEspera"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvAvaEsperaLabel"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/rbAvaEspera"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:progressTint="@color/colorAccentLight"
+                android:rating="2.5"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:stepSize="0.5"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp" />
+
+            <TextView
+                android:id="@+id/tvAvaRecepcao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvAvaRecepcaoLabel"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/rbAvaRecepcao"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:progressTint="@color/colorAccentLight"
+                android:rating="2.5"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:stepSize="0.5"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp" />
+
+            <TextView
+                android:id="@+id/tvAvaOrganizacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvAvaOrganizacaoLabel"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/rbAvaOrganizacao"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:progressTint="@color/colorAccentLight"
+                android:rating="2.5"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:stepSize="0.5"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp" />
+
+            <TextView
+                android:id="@+id/tvAvaSinalizacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvAvaSinalizacaoLabel"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/rbAvaSinalizacao"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:progressTint="@color/colorAccentLight"
+                android:rating="2.5"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:stepSize="0.5"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp" />
+
+            <TextView
+                android:id="@+id/tvAvaCordialidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvAvaCordialidadeLabel"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/rbAvaCordialidade"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:progressTint="@color/colorAccentLight"
+                android:rating="2.5"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:stepSize="0.5"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp" />
+
+            <TextView
+                android:id="@+id/tvAvaLimpeza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvAvaLimpezaLabel"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/rbAvaLimpeza"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:progressTint="@color/colorAccentLight"
+                android:rating="2.5"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:stepSize="0.5"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp" />
+
+            <TextView
+                android:id="@+id/tvAvaMedico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvAvaMedicoLabel"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/rbAvaMedico"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:progressTint="@color/colorAccentLight"
+                android:rating="2.5"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:stepSize="0.5"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/tvAvaEstacionamento"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvAvaEstacionamentoLabel"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/cbAvaEstacionamento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:scaleX="0.55"
+                    android:scaleY="0.55"
+                    android:text="@string/rbtAvaNaoutilizeiLabel"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="#4d4d4d"
+                    android:textSize="23sp"
+                    app:layout_constraintStart_toEndOf="@+id/tvAvaEstacionamento"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/rbAvaEstacionamento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:isIndicator="false"
+                    android:max="5"
+                    android:numStars="5"
+                    android:progressTint="@color/colorAccentLight"
+                    android:rating="2.5"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:stepSize="0.5"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbAvaEstacionamento" />
+
+                <TextView
+                    android:id="@+id/tvAvaTriagem"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/tvAvaTriagemLabel"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rbAvaEstacionamento" />
+
+                <CheckBox
+                    android:id="@+id/cbAvaTriagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="12dp"
+                    android:scaleX="0.55"
+                    android:scaleY="0.55"
+                    android:text="@string/rbtAvaNaoutilizeiLabel"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="#4d4d4d"
+                    android:textSize="23sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvAvaTriagem"
+                    app:layout_constraintTop_toBottomOf="@+id/rbAvaEstacionamento" />
+
+                <RatingBar
+                    android:id="@+id/rbAvaTriagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:isIndicator="false"
+                    android:max="5"
+                    android:numStars="5"
+                    android:progressTint="@color/colorAccentLight"
+                    android:rating="2.5"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:stepSize="0.5"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbAvaTriagem" />
+
+                <TextView
+                    android:id="@+id/tvAvaEnfermaria"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/tvAvaEnfermariaLabel"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rbAvaTriagem"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <CheckBox
+                    android:id="@+id/cbAvaEnfermaria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="12dp"
+                    android:scaleX="0.55"
+                    android:scaleY="0.55"
+                    android:text="@string/rbtAvaNaoutilizeiLabel"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="#4d4d4d"
+                    android:textSize="23sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvAvaEnfermaria"
+                    app:layout_constraintTop_toBottomOf="@+id/rbAvaTriagem" />
+
+                <RatingBar
+                    android:id="@+id/rbAvaEnfermaria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:isIndicator="false"
+                    android:max="5"
+                    android:numStars="5"
+                    android:progressTint="@color/colorAccentLight"
+                    android:rating="2.5"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:stepSize="0.5"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbAvaEnfermaria" />
+
+                <TextView
+                    android:id="@+id/tvAvaExames"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/tvAvaExamesLabel"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rbAvaEnfermaria"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <CheckBox
+                    android:id="@+id/cbAvaExames"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="12dp"
+                    android:scaleX="0.55"
+                    android:scaleY="0.55"
+                    android:text="@string/rbtAvaNaoutilizeiLabel"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="#4d4d4d"
+                    android:textSize="23sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvAvaEnfermaria"
+                    app:layout_constraintTop_toBottomOf="@+id/rbAvaEnfermaria" />
+
+                <RatingBar
+                    android:id="@+id/rbAvaExames"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:isIndicator="false"
+                    android:max="5"
+                    android:numStars="5"
+                    android:progressTint="@color/colorAccentLight"
+                    android:rating="2.5"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:stepSize="0.5"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbAvaExames" />
+
+                <TextView
+                    android:id="@+id/tvAvaInternacao"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/tvAvaInternacaoLabel"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rbAvaExames" />
+
+                <CheckBox
+                    android:id="@+id/cbAvaInternacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="12dp"
+                    android:scaleX="0.55"
+                    android:scaleY="0.55"
+                    android:text="@string/rbtAvaNaoutilizeiLabel"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="#4d4d4d"
+                    android:textSize="23sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvAvaEnfermaria"
+                    app:layout_constraintTop_toBottomOf="@+id/rbAvaExames" />
+
+                <RatingBar
+                    android:id="@+id/rbAvaInternacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="4dp"
+                    android:isIndicator="false"
+                    android:max="5"
+                    android:numStars="5"
+                    android:progressTint="@color/colorAccentLight"
+                    android:rating="2.5"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:stepSize="0.5"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAvaInternacao" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvAvaObservacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/tvAvaObservacaoLabel"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etAvaObservacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="@string/tvAvaObservacaoHint"
+                android:inputType="textMultiLine|textNoSuggestions|textVisiblePassword"
+                android:lines="5"
+                android:maxLength="140"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvAvaEnviar"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvAvaEnviar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/btAvaEnviarLabel"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/pbEnviando"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="invisible"
+                app:layout_constraintVertical_bias="0.161" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/pbCarregandolista"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbAvaToolbar"
+        app:layout_constraintVertical_bias="0.175" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="womm.quality_services.app.activity_cadastro2">
+
+<ImageView
+    android:id="@+id/ivCad2SpeedyPay"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:contentDescription="@string/ivGeralQualityServicesDesc"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.08"
+    app:srcCompat="@drawable/logo_qs" />
+
+<TextView
+    android:id="@+id/tvCad2Texto1"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/tvCad2Texto1Label"
+    android:textAlignment="center"
+    android:textColor="@color/colorPrimaryDark"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toTopOf="@+id/tvCad2Texto2"
+    app:layout_constraintEnd_toEndOf="@+id/tvCad2Texto2"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@+id/tvCad2Texto2"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.03" />
+
+<TextView
+    android:id="@+id/tvCad2Texto2"
+    android:layout_width="0dp"
+    android:layout_height="37dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/tvCad2Texto2Label"
+    android:textAlignment="center"
+    android:textColor="#b300172d"
+    android:textSize="13sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.412" />
+
+<TextView
+    android:id="@+id/tvCad2Texto3"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/tvCad2Texto3Label"
+    android:textAlignment="center"
+    android:textColor="@color/colorPrimaryDark"
+    android:textSize="16sp"
+    app:layout_constraintBottom_toTopOf="@+id/etCadCodigoVerif"
+    app:layout_constraintEnd_toEndOf="@+id/etCadCodigoVerif"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@+id/etCadCodigoVerif"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0" />
+
+<EditText
+    android:id="@+id/etCadCodigoVerif"
+    android:layout_width="0dp"
+    android:layout_height="32dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:background="#26ffffff"
+    android:ems="10"
+    android:hint="@string/etCad2CodigoVerifHint"
+    android:inputType="number"
+    android:textAlignment="center"
+    android:textAllCaps="false"
+    android:textColor="@color/colorPrimaryDark"
+    android:textColorHint="#6400182e"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.575" />
+
+
+<android.support.v7.widget.CardView
+    android:id="@+id/cvCad2Confirmar"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="8dp"
+    app:cardBackgroundColor="#FF1BB1AA"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.680">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvCad2Confirmar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/btCad2ConfirmarLabel"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/pbCadastrando2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/cvCad2Confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.973" />
+
+<TextView
+    android:id="@+id/tvCad2Texto4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/tvCad2Texto4Label"
+    android:textColor="#A100182e"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.805" />
+
+<View
+    android:id="@+id/vCad2Linha1"
+    android:layout_width="0dp"
+    android:layout_height="1dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="8dp"
+    android:background="#9600182e"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/tvCad2Texto4"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.798" />
+
+<View
+    android:id="@+id/vCad2Linha2"
+    android:layout_width="0dp"
+    android:layout_height="1dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:background="#9600182e"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toEndOf="@+id/tvCad2Texto4"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.798" />
+
+<android.support.v7.widget.CardView
+    android:id="@+id/cvCad2Reenviar"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="8dp"
+    app:cardBackgroundColor="#116E69"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.930">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvCad2Reenviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/btCad2ReenviarLabel"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tvCad2Segs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvCad2Reenviar"
+            android:text="@string/tvCad2Segs"
+            android:textColor="#95ffffff"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

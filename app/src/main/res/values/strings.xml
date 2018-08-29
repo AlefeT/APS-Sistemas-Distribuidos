@@ -1,0 +1,303 @@
+<resources>
+
+    <!-- Geral -->
+    <string name="app_name">Quality Services</string>
+    <string name="ivGeralQualityServicesDesc">TODO</string>
+
+
+    <!-- Busca Rapida -->
+    <string name="tvBRaTitulo1Label">Busca Rápida - Pronto Atendimento</string>
+    <string name="tvBRaFiltro1Label">Hospital:</string>
+    <string name="etBraFiltro1Hint">Ex.: Hospital Albert Einstein</string>
+    <string name="tvBRaFiltro2Label">Convênio:</string>
+    <string name="tvBRaFiltro3Label">Distância:</string>
+    <string name="tvBRaOuLabel">ou</string>
+    <string name="tvBRaFiltro4Label">Tempo de Espera:</string>
+    <string name="tvBRaObs1Label">Nota: Todos os campos são opcionais, no entanto, é necessário preencher ao menos um.</string>
+    <string name="btBRaBuscarLabel">Buscar</string>
+    <string name="strNadaSelecionado">Nenhum filtro foi especificado.\n\Por favor preencha ao menos um filtro.</string>
+    <string name="strHospitalEspecifico">Devido a um hospital específico ter sido selecionado, os demais filtros serão ignorados.</string>
+
+
+    <!-- Resultado Busca -->
+    <string name="tvNenhumencontradoLabel">Nenhum hospital encontrado.</string>
+
+
+    <!-- Ver Detalhes -->
+    <string name="tvVDRNomeLabel">Nome:</string>
+    <string name="tvVDREnderecoLabel">Endereço:</string>
+    <string name="tvVDRTempoesperaLabel">Tempo de Espera:</string>
+    <string name="tvVDRDistanciaLabel">Distância:</string>
+    <string name="tvVDREspecialidadeLabel">Especialidade:</string>
+    <string name="tvVDRNotageralLabel">Nota Geral:</string>
+    <string name="tvVDRSelecioneLabel">Selecione seu mapa de navegação:</string>
+    <string name="tvVDRAvaliarLabel">Clique Aqui para contribuir com os demais usuários fazendo sua Avaliação deste hospital.</string>
+    <string name="tvVDRMapsLabel">Google Maps</string>
+    <string name="tvVDRWazeLabel">Waze</string>
+
+
+    <!-- Avaliar e AvaliarVD -->
+    <string name="tvAvaHospitalLabel">Selecione um Hospital:</string>
+    <string name="tvAVDHospitalSelecionadoLabel">Hospital:</string>
+    <string name="tvAvaDataLabel">Data do atendimento:</string>
+    <string name="tvAvaEsperaLabel">Tempo de Espera:</string>
+    <string name="tvAvaEstacionamentoLabel">Estacionamento:</string>
+    <string name="tvAvaRecepcaoLabel">Recepção:</string>
+    <string name="tvAvaOrganizacaoLabel">Organização:</string>
+    <string name="tvAvaSinalizacaoLabel">Sinalização:</string>
+    <string name="tvAvaObservacaoLabel">Observação (Opcional):</string>
+    <string name="tvAvaObservacaoHint">Digite aqui sua observação.\n\Máximo de 140 caracteres.</string>
+    <string name="tvAvaCordialidadeLabel">Cordialidade:</string>
+    <string name="tvAvaLimpezaLabel">Limpeza:</string>
+    <string name="tvAvaTriagemLabel">Triagem:</string>
+    <string name="tvAvaMedicoLabel">Médico:</string>
+    <string name="tvAvaEnfermariaLabel">Enfermaria:</string>
+    <string name="tvAvaExamesLabel">Exames:</string>
+    <string name="tvAvaInternacaoLabel">Internação:</string>
+    <string name="tvAvaTituloLabel">Avaliar Qualidade dos Hospitais</string>
+    <string name="etAvaHospitalLabel">Ex.: Hospital Albert Einstein</string>
+    <string name="rbtAvaNaoutilizeiLabel">Não utilizei.</string>
+    <string name="btAvaEnviarLabel">Enviar Avaliação</string>
+    <string name="toastAvaEnviadaLabel">Avaliação enviada com sucesso.</string>
+    <string name="strDataInvalida">Data inválida.\n\Por favor informe a data correta que visitou o hospital.</string>
+    <string name="strDataInvalidaF">Data inválida.\n\A data inserida ainda não ocorreu.\n\Por favor informe a data correta que visitou o hospital.</string>
+    <string name="strDataInvalidaA">Data inválida.\n\A data inserida é muito antiga.\n\Por favor informe a data correta que visitou o hospital.</string>
+    <string name="strHospitalInvalido">Hospital inválido.\n\Por favor digite parte do nome do hospital desejado e o selecione na lista.</string>
+
+
+    <!-- Perfil -->
+    <string name="tvPerTitulo1Label">Meu Perfil</string>
+    <string name="tvPerNomeLabel">Nome:</string>
+    <string name="tvPerCPFLabel">CPF:</string>
+    <string name="tvPerCelLabel">Celular:</string>
+    <string name="tvPerCEPLabel">CEP:</string>
+    <string name="tvPerEmailLabel">E-mail:</string>
+    <string name="tvPerEditarLabel">Editar</string>
+
+
+    <!-- Editar Perfil -->
+    <string name="tvEdtTitulo1Label">Editar Perfil</string>
+    <string name="tvEdtSalvarLabel">Salvar</string>
+    <string name="tvEdtNota1Label">Nota: Para demais alterações cadastrais, por favor utilize o Fale Conosco.</string>
+    <string name="cepinvalidoLabel">CEP Inválido.\n\Por favor digite um CEP válido, ou deixe o campo vazio.</string>
+    <string name="emailinvalidoLabel">E-mail Inválido.\n\Por favor digite um E-mail válido, ou deixe o campo vazio.</string>
+    <string name="naoalterouLabel">Nenhum dado foi alterado.</string>
+    <string name="alteroutdLabel">CEP e E-mail alterados com sucesso.</string>
+    <string name="alteroucLabel">CEP alterado com sucesso.</string>
+    <string name="alteroueLabel">E-mail alterado com sucesso.</string>
+    <string name="tvPerSairLabel">Sair</string>
+
+
+    <!-- Fale Conosco -->
+    <string name="tvFCTitulo1Label">Fale Conosco</string>
+    <string name="tvFCTelefoneLabel">Telefone</string>
+    <string name="tvFCEmailLabel">E-mail</string>
+    <string name="tvFCWhatsLabel">WhatsApp</string>
+    <string name="tvFCFaceLabel">FaceBook</string>
+    <string name="tvFCSiteLabel">WebSite</string>
+    <string name="tvFCChatLabel">Chat</string>
+
+
+    <!-- Busca Avançada -->
+    <string name="tvBAvTituloLabel">Busca Avançada</string>
+    <string name="tvBAvEsperaLabel">Espera</string>
+    <string name="tvBAvEspecialidadeLabel">Especialidade</string>
+    <string name="tvBAvDistanciaLabel">Distância</string>
+    <string name="tvBAvConvenioLabel">Convenio</string>
+    <string name="tvBAvNotageralLabel">Nota Geral</string>
+    <string name="tvBAvEstacionamentoLabel">Estacionamento</string>
+    <string name="tvBAvRecepcaoLabel">Recepção</string>
+    <string name="tvBAvOrganizacaoLabel">Organização</string>
+    <string name="tvBAvSinalizacaoLabel">Sinalização</string>
+    <string name="tvBAvCordialidadeLabel">Cordialidade</string>
+    <string name="tvBAvLimpezaLabel">Limpeza</string>
+    <string name="tvBAvTriagemLabel">Triagem</string>
+    <string name="tvBAvMedicoLabel">Médico</string>
+    <string name="tvBAvEnfermariaLabel">Enfermaria</string>
+    <string name="tvBAvExamesLabel">Exames</string>
+    <string name="tvBAvInternacaoLabel">Internação</string>
+    <string name="tvBAvPesquisarLabel">Pesquisar</string>
+
+
+    <!-- Ajuda -->
+    <string name="tvAjuTituloLabel">Ajuda sobre o App</string>
+    <string name="tvAjuBuscrapLabel">Como eu faço uma pesquisa rápida?</string>
+    <string name="tvAjuBuscrapRLabel">\n\<b>Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Busca Rápida".\n\ \n\<b>Segundo passo:</b>\n\Informe parte do nome do hospital desejado e o selecione na lista que será exibida OU os filtros que deseja utilizar na busca.\n\ \n\<b>Terceiro passo:</b>\n\Clique no botão "Buscar" para ser enviado à tela de resultados, onde você irá encontrar uma lista com todos os hospitais que se encaixam na busca.\n\ \n\<b>Quarto passo:</b>\n\Clique no botão "Ver Detalhes" do hospital que deseja para ver mais detalhes sobre o hospital.\n\ \n\</string>
+    <string name="tvAjuBuscavaLabel">Como eu faço uma pesquisa avançada?</string>
+    <string name="tvAjuBuscavaRLabel">\n\<b>Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Busca Avançada".\n\ \n\<b>Segundo passo:</b>\n\Informe parte do nome do hospital desejado e o selecione na lista que será exibida OU os filtros que deseja utilizar na busca.\n\ \n\<b>Terceiro passo:</b>\n\Clique no botão "Pesquisar" para ser enviado à tela de resultados, onde você irá encontrar uma lista com todos os hospitais que se encaixam na busca.\n\ \n\<b>Quarto passo:</b>\n\Clique no botão "Ver Detalhes" do hospital que deseja para ver mais detalhes sobre o hospital.\n\ \n\</string>
+    <string name="tvAjuAvaliarLabel">Como eu avalio um hospital?</string>
+    <string name="tvAjuAvaliarRLabel">\n\<b>Alternativa 1\n\ \n\Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Avaliar Hospital".\n\ \n\<b>Segundo passo:</b>\n\Informe parte do nome do hospital desejado e o selecione na lista que será exibida.\n\ \n\<b>Terceiro passo:</b>\n\Informe a data em que foi realizado o atendimento.\n\ \n\<b>Quarto passo:</b>\n\Informe a nota em cada um dos quesitos do hospital selecionado, (como Recepção, Organização, Limpeza, etc) preenchendo as estrelas de 0 a 5.\n\Caso não tenha utilizado algum quesito, marque a caixa "Não utilizei" do mesmo.\n\Caso deseje, poderá também escrever um comentário ou observação deste hospital ao final da página.\n\ \n\<b>Quinto passo:</b>\n\Clique no botão "Enviar Avaliação" para concluir o processo e enviar sua avaliação sobre este hospital.\n\ \n\ \n\ \n\<b>Alternativa 2\n\ \n\Primeiro passo:</b>\n\Após executar uma pesquisa e acessar a página de "Ver Detalhes" do hospital desejado (caso necessário, verificar a seção "Como eu faço uma pesquisa rápida/avançada?").\n\Clicar no botão "Clique Aqui para contribuir com os demais usuários fazendo sua Avaliação deste hospital." para ser enviado para a tela de avaliar o hospital.\n\ \n\<b>Segundo passo:</b>\n\Seguir as intruções informadas a partir do Passo 3 da Alternativa 1.\n\ \n\</string>
+    <string name="tvAjuEditperfLabel">Como posso editar meu perfil?</string>
+    <string name="tvAjuEditperfRLabel">\n\<b>Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Meu Perfil".\n\ \n\<b>Segundo passo:</b>\n\Clique no botão "Editar" para ser enviado à tela de edição.\n\ \n\<b>Terceiro passo:</b>\n\Preencha os campos (CEP e/ou E-mail) que deseja alterar.\n\Nota: Caso deseje alterar outras informações, por favor entre em contato com nossos atendentes por meio do "Fale Conosco".\n\ \n\<b>Quarto passo:</b>\n\Clique no botão "Salvar" para concluir o processo e salvar suas alterações.\n\ \n\</string>
+    <string name="tvAjuContatoLabel">Como eu entro em contato com o suporte?</string>
+    <string name="tvAjuContatoRLabel">\n\<b>Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Fale Conosco".\n\ \n\<b>Segundo passo:</b>\n\Clique no botão referente ao meio de contato que mais lhe agrada (Telefone, E-mail, Facebook, etc), para ser enviado para a plataforma desejada e poder conversar com um de nossos atendentes.\n\ \n\</string>
+    <string name="tvAjuRankingLabel">Como posso ver os melhores hospitais?</string>
+    <string name="tvAjuRankingRLabel">\n\<b>Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Ranking".\n\ \n\<b>Segundo passo:</b>\n\Nesta tela, você poderá visualizar a lista dos melhores hospitais do Brasil segundo as avaliações dos usuários.\n\ \n\</string>
+
+
+    <!-- Login -->
+    <string name="etLogEmailHint">E-mail</string>
+    <string name="etLogSenhaHint">Senha</string>
+    <string name="btLogLoginLabel">Login</string>
+    <string name="btLogCadastrasLabel">Cadastre-se</string>
+    <string name="tvLogEsqueceuLabel">Esqueceu sua senha? Clique Aqui!</string>
+    <string name="tvLogNaopossuiLabel">Não possui uma conta?</string>
+
+
+    <!-- Esqueceu -->
+    <string name="tvEsqTexto1Label">Caso já possua um E-mail cadastrado no Quality Services e esqueceu a senha, informe este E-mail cadastrado no campo abaixo.</string>
+    <string name="tvEsqTexto2Label">Assim, uma nova senha será enviada à este E-mail dentro de alguns instantes.</string>
+    <string name="tvEsqTexto3Label">Digite seu E-mail cadastrado:</string>
+    <string name="btEsqConfirmarLabel">Enviar</string>
+    <string name="tvEsqTexto4Label">Ou</string>
+    <string name="btEsqVoltarLabel">Voltar</string>
+
+
+    <!-- - - Cadastro1 - - -->
+    <string name="tvCadNomeLabel">Nome Completo:</string>
+    <string name="etCadNomeHint">Seu Nome e Sobrenome</string>
+    <string name="tvCadCPFLabel">CPF:</string>
+    <string name="etCadCPFHint">Apenas dígitos (ex.: 12345678901)</string>
+    <string name="tvCadCelularLabel">Número de Celular com DDD:</string>
+    <string name="etCadCelularHint">Apenas dígitos (ex.: 11912345678)</string>
+    <string name="tvCadEmailLabel">E-mail:</string>
+    <string name="etCadEmailHint">usuario@exemplo.com.br</string>
+    <string name="tvCadSenhaLabel">Senha:</string>
+    <string name="etCadSenhaHint">Mínimo de 6 caracteres</string>
+    <string name="tvCadTermosPoliticaLabel">Ao se Cadastrar, você concorda com nossos Termos de Uso e Política de Privacidade.</string>
+    <string name="btCadCadastrarLabel">Cadastrar</string>
+
+
+    <!-- - - Cadastro2 - - -->
+    <string name="tvCad2Texto1Label">Aguarde, em alguns instantes você receberá um Código de Verificação via SMS.</string>
+    <string name="tvCad2Texto2Label">Este código será enviado ao seu Número de Celular cadastrado na etapa anterior.</string>
+    <string name="tvCad2Texto3Label">Digite o Código de Verificação:</string>
+    <string name="etCad2CodigoVerifHint">Apenas dígitos (ex.: 123456)</string>
+    <string name="btCad2ConfirmarLabel">Confirmar</string>
+    <string name="tvCad2Texto4Label">Não recebeu o SMS?</string>
+    <string name="btCad2ReenviarLabel">Reenviar</string>
+
+
+    <!-- - - Cadastro3 - - -->
+    <string name="btCad3EntrarLabel">Entrar</string>
+    <string name="tvCad3Texto1Label">Parabéns! Você entrou no melhor aplicativo de avaliação hospitalar do Brasil!</string>
+    <string name="tvCad3Texto2Label">Não perca a oportunidade de contribuir para a área da saúde. Faça sua avaliação após o atendimento do hospital.</string>
+
+
+    <!-- - - layout_Termos - - -->
+    <string name="btTerOkLabel">Ok</string>
+    <string name="wvTerTermosTitulo1Label">
+    TERMO DE USO DO APLICATIVO QUALITY SERVICES PARA CLIENTES\n\ \n\
+    Este Termo de Uso (“Termo”) contém as “Condições Gerais para CLIENTES”, referentes ao uso do aplicativo Quality Services oferecido pela WOMM MARKETING E SERVIÇOS DIGITAIS LTDA ME, inscrita no CNPJ sob n.º 07.078.394/0001-40, com sede na Rua Sete de Abril, 252 3º andar, República, CEP 01044-000, na cidade de São Paulo, no estado de São Paulo, Brasil que está disponível a todos os CLIENTES por meio do site www.qualityservices.net.br (“Site”) e do aplicativo QUALITY SERVICES para celular (“App”) denominados “APLICATIVO” de forma a viabilizar e facilitar a qualidade dos serviços oferecidos pelas redes hospitalares.\n\ \n\
+    VONTADE CONTRATUAL\n\ \n\
+    Conhecimento e Vontade das Partes.\n\ \n\
+    Considerando que:\n\ \n\
+    a) A “QUALITY SERVICES” é exclusiva detentora dos direitos autorais sobre o Software e suas marcas, podendo usar, fruir, gozar e dispor destes, especialmente para incremento tecnológico, alteração de versões, acordos comerciais, campanhas promocionais, dentre outras funcionalidades ou serviços que possam ser agregados, de forma onerosa ou gratuita. \n\ \n\
+    b) A relação jurídica estabelecida entre as Partes não é de consumo, conforme artigo 2º do Código de Defesa do Consumidor, que dispõe acerca do conceito de consumidor.\n\ \n\
+    c) A Contratante possui informação, independência e liberdade contratual que lhe permitem aderir ao presente Contrato e à Política de Privacidade do Software, e para disciplinar suas relações com a “QUALITY SERVICES”, Fabricantes, Lojistas, Parceiros Comerciais e sua cadeia de fornecedores de produtos e serviços, inclusive de natureza financeira. \n\ \n\
+    ATENÇÃO: LEIA ESTE “TERMO” CUIDADOSAMENTE ANTES DE EFETUAR O CADASTRO NO “QUALITY SERVICES”. QUALQUER PESSOA LEGALMENTE CAPAZ, DORAVANTE DENOMINADA “PACIENTE”, QUE UTILIZE OS SERVIÇOS DO “QUALITY SERVICES”, DECLARA ACEITAR ESTE “TERMO” E TODAS AS POLÍTICAS E PRINCÍPIOS QUE O REGEM. \n\ \n\
+    ESTE “TERMO” CONSTITUI O CONSENSO INTEGRAL ENTRE O “QUALITY SERVICES” E O “PACIENTES” COM RELAÇÃO ÀS REGRAS AQUI DISPOSTAS, SUBSTITUINDO TODOS E QUAISQUER ACORDOS E ENTENDIMENTOS, VERBAIS OU ESCRITOS, MANTIDOS ANTERIORMENTE. A ACEITAÇÃO DO PRESENTE “TERMO” É INDISPENSÁVEL E OBRIGATÓRIA PARA A UTILIZAÇÃO DOS SERVIÇOS PRESTADOS PELO “QUALITY SERVICES”. \n\ \n\
+    A UTILIZAÇÃO DOS SERVIÇOS OFERECIDOS PELO “QUALITY SERVICES” IMPLICA NA IMEDIATA ANUÊNCIA DESTE TERMO E SEU CONTEÚDO.\n\ \n\
+    ATENÇÃO\n\ \n\
+    ESTE “TERMO” É DESTINADO A REGULAR O USO DO APLICATIVO PELOS “PACIENTES” E, DADA SUA PUBLICIDADE, NÃO É PASSÍVEL DE ALEGAÇÃO DE DESCONHECIMENTO DE SEU CONTEÚDO POR PARTE DE NENHUM USUÁRIO DO APLICATIVO.\n\ \n\
+    O(S) CLIENTE(S) SERÁ(ÃO) RESPONSÁVEL(IS) POR TODO E QUALQUER ATO ILÍCITO OU CRIMINOSO PRATICADO QUANDO DA UTILIZAÇÃO DOS SERVIÇOS OFERECIDOS PELO “APLICATIVO”.\n\ \n\
+    CONDIÇÕES GERAIS PARA CLIENTES\n\ \n\
+    1.    DOS TERMOS\n\ \n\
+    1.1.    QUALITY SERVICES: é um dos maiores aplicativos mobile do mundo, o qual permite a conexão entre PACIENTES e REDES HOSPITALARES, possibilitando um contato rápido, conveniente e cômodo, em apenas alguns toques, para tratar de informações, Tempo de Espera, Distancia a Percorrer, Atendimento, Médicos, Planos de Saúde e Ranking Hospitalar. Assim, o QUALITY SERVICES apenas viabiliza/facilita a escolha do Paciente em contato entre o HOSPITAL e PACIENTES, disponibilizando de forma rápida a qualidade e localidade de um hospital mais próximo a sua localização.\n\ \n\
+    1.2.    PACIENTE: É aquele Indivíduo que está sob cuidados médicos e se cadastrou no Aplicativo Quality Services para solicitar uma posição referente a um determinado hospital e busca um atendimento com melhor qualidade e rapidez contribuindo no final do seu atendimento com uma avaliação sobre o atendimento oferecido pelo hospital escolhido.\n\ \n\
+    1.3.  	REDE HOSPITALAR: é um local destinado ao atendimento de doentes, para proporcionar o diagnóstico, que pode ser de vários tipos (laboratorial, clínico, cinesiológico-funcional) e o tratamento necessário. No final do serviço prestado ao PACIENTE o hospital será avaliado e terá seu resultado exposto para escolha de novos Pacientes.\n\ \n\
+    1.4.	SERVIÇOS ADICIONAIS: são os serviços oferecidos pelo QUALITY SERVICES para auxiliar na escolha de um HOSPITAL:\n\ \n\
+    1.4.1. AVALIAR HOSPITAL: é um serviço oferecido pelo QUALITY SERVICES que demonstra os serviços oferecidos pelos Hospitais. \n\ \n\
+    1.4.2.	RANKING HOSPITALAR: é um serviço que apresenta a posição de cada Hospital avaliado pelos Pacientes.\n\ \n\
+    1.4.3.  BUSCA RÁPIDA: É um serviço oferecido pelo QUALITY SERVICES onde o Paciente pode executar uma busca de um Hospital que vai atender as suas necessidade com mais Rapidez e Qualidade.\n\ \n\
+    1.4.4.  BUSCA AVANÇADA: É um serviço oferecido pelo QUALITY SERVICES onde o Paciente pode executar uma busca com maior quantidade de Informações, que irá atender as suas necessidade com mais Rapidez e Qualidade.\n\ \n\
+    1.4.5. MEU PERFIL: Identifica os dados fornecidos pelos usuários no cadastramento do Aplicativo QUALITY SERVICES.\n\ \n\
+    1.4.5.  AJUDA: FAQ – Frequently Asked Questions (Perguntas Frequentes)\n\ \n\
+    1.4.5.  FALE CONOSCO: permite o envio de mensagens através de vários meios de comunicação para o QUALITY SERVICES.\n\ \n\
+    2.    O QUE É O APLICATIVO?\n\ \n\
+    2.1.  O APLICATIVO foi criado com a finalidade de fornecer informações das Redes Hospitalares, onde os Pacientes poderão contribuir Avaliando o seu atendimento após seu Atendimento.\n\ \n\
+    2.2.  CASO UM CLIENTE QUEIRA SE CADASTRAR, ACESSAR E UTILIZAR TODAS AS FUNCIONALIDADES DISPONÍVEIS DO APLICATIVO, DEVERÁ LER ATENTAMENTE AS CONDIÇÕES ABAIXO E CONFIRMAR SUA ANUÊNCIA AO SE REGISTRAR NO APLICATIVO.\n\ \n\
+    3.    DO OBJETO\n\ \n\
+    3.1.  O presente TERMO visa estabelecer as regras e condições para que PACIENTES possam se cadastrar junto ao QUALITY SERVICES e utilizar o APLICATIVO para identificar e escolher o Hospital que melhor lhe atender, com Qualidade e Rapidez nos serviços.\n\ \n\
+    4.   DO SERVIÇO\n\ \n\
+    4.1.  Os serviços prestados pelo QUALITY SERVICES aos PACIENTES consistem em cadastrar PACIENTES em uma base de dados para habilitá-los à utilização do aplicativo afim de fornecer após uma ‘AVALIAÇÃO’ do PACIENTE uma posição da QUALIDADE do atendimento oferecido pelo HOSPITAL onde ele foi atendido.\n\ \n\
+    4.1.1.  O APLICATIVO permite a visualização de todos os HOSPITAIS que tiveram uma AVALIAÇÃO feita por um PACIENTE através do APP QUALITY SERVICES.\n\ \n\
+    4.1.2.  Independente da utilização do aplicativo por pacientes, também os HOSPITAIS poderão contratar os serviços de amostragens do QUALITY SERVICES referentes aos “Pontos Avaliados por cada Pacientes”.\n\ \n\
+    5.    CADASTRO\n\ \n\
+    5.1.   Para fazer o cadastro no QUALITY SERVICES e utilizar o APLICATIVO, o PACIENTE deverá preencher as seguintes informações:\n\ \n\
+    5.1.1.   Possuir smartphone com sistema operacional Android, IOS ou Windows Phone com acesso à internet.\n\ \n\
+    5.1.2.   Informar o seu Nome Completo, CPF e seu número do smartphone e prosseguir, após o recebimento do SMS com o código de confirmação, digita-lo no campo apropriado e dar seguimento ao cadastro.\n\ \n\
+    5.1.3.    O QUALITY SERVICES não se obriga a fiscalizar ou controlar a veracidade das informações fornecidas pelo PACIENTES, sendo estes os únicos responsáveis, em todas as esferas legais, pela qualidade das informações que prestarem ao QUALITY SERVICES, bem como atualização das informações fornecidas.\n\ \n\
+    5.2.  Somente as pessoas que tenham plena capacidade legal estão autorizadas a participar do APLICATIVO. Pessoas que não gozem dessa capacidade, não poderão cadastrar-se na qualidade de CLIENTES.\n\ \n\
+    5.3.   O QUALITY SERVICES se reserva ainda o direito de utilizar todos os meios legais e possíveis para identificar os PACIENTES, bem como de solicitar ou buscar de forma independente, a qualquer momento, dados adicionais e documentos que considere necessários, a seu exclusivo critério, com a finalidade de verificar os dados cadastrais informados.\n\ \n\
+    5.4.   AO UTILIZAR OS SERVIÇOS DO “QUALITY SERVICES” O “PACIENTE” RATIFICA ESTE “TERMO” DE ADESÃO E SE OBRIGA A CUMPRIR TODAS AS CLÁUSULAS NELE PREVISTAS.\n\ \n\
+    6.   DA LIMITAÇÃO DE RESPONSABILIDADE\n\ \n\
+    6.1.  O QUALITY SERVICES não garante que o APLICATIVO estará disponível ininterruptamente e/ou que estará sempre livre de erros, não podendo, por conseguinte, ser responsabilizado por danos causados aos PACIENTES em virtude de qualquer interrupção no funcionamento do APLICATIVO. Eventualmente, o APLICATIVO poderá não estar disponível por motivos técnicos ou falhas da internet, ou por qualquer outro caso fortuito ou de força maior, alheios ao seu controle.\n\ \n\
+    6.1.1.   O QUALITY SERVICES envidará esforços para manter o APLICATIVO no ar durante 24 (vinte e quatro) horas por dia, sem interrupção, salvo a impossibilidade de funcionamento integral e ininterrupto do sistema de telecomunicação ou de informática, por casos fortuitos ou de força maior. Nesta situação de fragilidade também se inclui, dado sua complexidade, a dependência de serviços de telecomunicações prestados por terceiros, razão pelo qual não pode oferecer plena garantia da prestação do serviço de forma ininterrupta e/ou isenta de erros.\n\ \n\
+    6.2.   O PACIENTE concorda também que o QUALITY SERVICES não responderá por quaisquer danos ou prejuízos causados a seu aparelho celular ou qualquer outro equipamento eletrônico, como resultado do uso do APLICATIVO, inclusive por qualquer vírus que possa atacar o equipamento eletrônico do PACIENTE em decorrência do acesso, utilização ou navegação na internet ou como consequência da transferência de dados, arquivos, imagens, textos ou áudio.\n\ \n\
+    6.2.1.   O QUALITY SERVICES não será responsável por qualquer dano, prejuízo ou perda no equipamento do PACIENTE causado por falhas no sistema, no servidor ou na internet decorrentes de condutas de terceiros, caso fortuito ou força maior.\n\ \n\
+    6.3.  O QUALITY SERVICES não será responsável por erros ou inconsistências no fornecimento de informações por outros sistemas que alimentam a base de dados do QUALITY SERVICES.\n\ \n\
+    6.4.  O QUALITY SERVICES não se responsabiliza por conteúdos enviados por terceiros por meio do APLICATIVO. O envio de mensagens a partir das informações disponibilizadas por meio do APLICATIVO são de responsabilidade exclusiva dos proprietários de tais informações e dos USUÁRIOS que as utilizarem.\n\ \n\
+    6.5.   O QUALITY SERVICES isenta-se de responsabilidade por qualquer erro ou atraso na remoção de conteúdo impreciso, ilícito ou censurável, a seu exclusivo critério, proveniente de terceiros por meio do APLICATIVO.\n\ \n\
+    6.6. Este aplicativo estará em contínuo desenvolvimento e pode conter erros e, por isso, o uso é fornecido "no estado em que se encontra" e sob risco do usuário final. Na extensão máxima permitida pela legislação aplicável a QUALITY SERVICES isenta-se de quaisquer garantias e condições expressas ou implícitas incluindo, sem limitação, garantias de comercialização, adequação a um propósito específico, titularidade e não violação no que diz respeito ao aplicativo e qualquer um de seus componentes ou ainda à prestação ou não de serviços de suporte. A QUALITY SERVICES não garante que a operação deste aplicativo seja contínua e sem defeitos. \n\ \n\
+    6.7. Exceto pelo estabelecido neste documento não há outras garantias, condições ou promessas aos aplicativos, expressas ou implícitas, e todas essas garantias, condições e promessas podem ser excluídas de acordo com o que é permitido por lei sem prejuízo à QUALITY SERVICES e seus colaboradores.\n\ \n\
+    6.7.1.	A QUALITY SERVICES não garante, declara ou assegura que o uso deste aplicativo será ininterrupto ou livre de erros e você concorda que a QUALITY SERVICES poderá remover por períodos indefinidos ou cancelar este aplicativo a qualquer momento sem que você seja avisado.\n\ \n\ 
+    6.7.2.	A QUALITY SERVICES não garante, declara nem assegura que este aplicativo esteja livre de perda, interrupção, ataque, vírus, interferência, pirataria ou outra invasão de segurança e isenta-se de qualquer responsabilidade em relação à essas questões. Você é responsável pelo backup do seu próprio dispositivo. \n\ \n\
+    6.7.3.	Em hipótese alguma a QUALITY SERVICES, bem como seus diretores, executivos, funcionários, afiliadas, agentes, contratados ou licenciadores responsabilizar-se-ão por perdas ou danos causados pelo uso do aplicativo. \n\ \n\ 
+    6.7.4	Os conteúdos transmitidos pelos aplicativos tais como a transmissão da programação de rádios AM, FM, programações televisivas e afins são de responsabilidade de seus idealizadores. A QUALITY SERVICES isenta-se de qualquer responsabilidade direta ou indireta sobre estes conteúdos e o acesso aos mesmos é facultativo ao usuário.\n\ \n\ 
+    7.   POLÍTICA DE PRIVACIDADE\n\ \n\
+    7.1.  Ao aceitar este TERMO, o CLIENTE concorda em permitir que o QUALITY SERVICES realize o tratamento dos dados disponibilizados por meio do APLICATIVO.\n\ \n\
+    7.1.1.   O QUALITY SERVICES poderá utilizar os dados pessoais, agregados e/ou anônimos de seus PACIENTES para elaboração de relatórios, análises e transferência a terceiros, conforme for necessário para o bom funcionamento do APLICATIVO.\n\ \n\
+    7.1.2.   O QUALITY SERVICES coletará, armazenará, tratará e poderá, a seu critério, transmitir ou disponibilizar a terceiros os dados e informações fornecidos pelo PACIENTES ao efetuar o cadastro no APLICATIVO, sempre em respeito aos ditames legais.\n\ \n\
+    7.2.  O QUALITY SERVICES implementa medidas que considera apropriadas para salvaguardar e ajudar a evitar o acesso, alteração, divulgação ou destruição, sem autorização, das informações do PACIENTES coletadas por meio do APLICATIVO. No entanto, o QUALITY SERVICES não se responsabiliza pelo uso indevido, por terceiros, das informações fornecidas pelo PACIENTE. Caso o PACIENTE considere ter suas informações utilizadas indevidamente por terceiros e em desacordo com o presente TERMO, este deverá entrar em contato com o QUALITY SERVICES por meio do seguinte canal de comunicação: sac@qualityservice.net.br. O QUALITY SERVICES analisará a reclamação e tomará as medidas que considerar adequadas.\n\ \n\
+    7.3.  A cada vez que um PACIENTE realizar pesquisas por meio do APLICATIVO, o QUALITY SERVICES coletará todas as informações pertinentes e poderá utilizá-las para fins específicos da utilização do APLICATIVO. O PACIENTE desde já autoriza o QUALITY SERVICES a comunicar os provedores de serviços, caso o QUALITY SERVICES tenha razões para crer, a seu exclusivo critério, que o PACIENTE esteja envolvido em qualquer atividade considerada ilegal, que viole os direitos de qualquer pessoa, que viole quaisquer das cláusulas do presente TERMO ou que infrinja qualquer norma de conduta para utilização do APLICATIVO.\n\ \n\
+    7.4.  O QUALITY SERVICES não será responsável por quaisquer perdas de dados do PACIENTE, inclusive decorrentes de caso fortuito, força maior, ocorridas em virtude de invasões ao APLICATIVO e quebra de segurança por parte de terceiros não autorizados.\n\ \n\
+    7.5.  Todas as informações coletadas por meio do APLICATIVO são armazenadas em ambientes seguros e de acesso restrito ao público.\n\ \n\
+    8.   BLOQUEIO DE CLIENTE\n\ \n\
+    8.1.  O QUALITY SERVICES poderá suspender, excluir e/ou bloquear o cadastro do PACIENTE por motivos fundamentados em reclamações efetuadas por uma REDE HOSPITALAR (independentemente de sua natureza) ou avaliações internas.\n\ \n\
+    8.1.1.  O QUALITY SERVICES possui uma política interna de avaliação dos PACIENTES, com equipe focada em análise de reclamações. Para assegurar o bom resultado desta avaliação, o QUALITY SERVICES garante aos PACIENTES o anonimato e que não divulgará informações pessoais do denunciante.\n\ \n\
+    9.  DAS PROIBIÇÕES E PENALIDADES\n\ \n\
+    9.1.  As informações fornecidas pelos PACIENTES que requisitarem o cancelamento do seu cadastro ou forem bloqueados por violação a este TERMO serão armazenadas pelo QUALITY SERVICES, pelo prazo previsto em lei, para prestação de informações às autoridades competentes que eventualmente venham a ser consideradas necessárias.\n\ \n\
+    9.2.  O PACIENTE concorda em indenizar e/ou isentar o QUALITY SERVICES e seus representantes em caso de quaisquer reclamações, processos, prejuízo, responsabilização e despesas, incluindo honorários advocatícios razoáveis e custas judiciais, resultantes do dano que causar ao QUALITY SERVICES por uma conduta ilícita.\n\ \n\
+    9.3.  O PACIENTE que descumprir quaisquer normas de conduta estará sujeito à suspensão, exclusão, bloqueio do seu cadastro e, até mesmo, às demais penalidades aplicáveis por lei.\n\ \n\
+    9.4.  PACIENTES sob investigação criminal poderão ser excluídos ou bloqueados até que seja apurada a responsabilidade ou ausência de responsabilidade do PACIENTE em referida investigação para garantir o padrão de segurança dos serviços oferecidos pelo QUALITY SERVICES aos PACIENTES.\n\ \n\
+    9.5.  O PACIENTE, ao aceitar este TERMO, tem conhecimento e obriga-se a respeitar as previsões deste TERMO.\n\ \n\
+    9.6.  Sem prejuízo do presente TERMO, o QUALITY SERVICES proíbe as seguintes práticas, a título exemplificativo, quais sejam:\n\ \n\
+    9.6.1.    Descumprimento de qualquer previsão deste TERMO.\n\ \n\
+    9.6.2.    Descumprimento de quaisquer deveres do PACIENTE.\n\ \n\
+    9.6.3.    Prática de atos fraudulentos ou dolosos.\n\ \n\
+    9.6.4.    Fornecimento de informações incorretas ou quaisquer omissões propositais ao QUALITY SERVICES.\n\ \n\
+    9.6.5.   Atos e/ou omissões do PACIENTE que tenham o potencial de causem danos à terceiros ou ao próprio QUALITY SERVICES.\n\ \n\
+    9.7.  O PACIENTE que violar quaisquer das previsões do presente TERMO estará sujeito ao bloqueio ou exclusão do APLICATIVO, a exclusivo critério do QUALITY SERVICES.\n\ \n\
+    9.8.  A utilização do APLICATIVO com o intuito de fraude, tanto por um PACIENTE, quanto por um HOSPITAL, resultará na obrigação de indenizar o QUALITY SERVICES em razão dos danos causados e será punível nos termos da legislação em vigor.\n\ \n\
+    10.   DA PROPRIEDADE INTELECTUAL\n\ \n\
+    10.1.    O PACIENTE concorda que os logotipos, marcas, insígnias, fotos, imagens, descrições, textos, layout, símbolos, sinais distintivos, manual(ais) e quaisquer outros materiais correlatos ao SITE e/ou APLICATIVO do QUALITY SERVICES, constituem, conforme o caso, direitos autorais, segredos de negócio, e/ou direitos de propriedade do QUALITY SERVICES, sendo tais direitos protegidos pela legislação nacional e internacional aplicável à propriedade intelectual, especialmente quanto aos termos e condições das Leis nºs 9.279/96, 9.609/98 e 9.610/98.\n\ \n\
+    11.   DA LICENÇA
+    11.1. O QUALITY SERVICES concede ao PACIENTE uma licença limitada, pessoal, não exclusiva, não transferível, não comercial e plenamente revogável, para utilizar o APLICATIVO em seu aparelho celular, tablet ou computador em conformidade com as condições previstas neste TERMO.\n\ \n\
+    11.2.  O QUALITY SERVICES não se responsabiliza por danos sofridos pelo PACIENTE em razão de cópia, transferência, distribuição ou qualquer outra forma de utilização de conteúdo protegido disponibilizado no APLICATIVO.\n\ \n\
+    11.3. O aplicativo deverá ser utilizado por você, usuário/paciente. A venda, transferência, modificação, engenharia reversa ou distribuição bem como a cópia de textos, imagens ou quaisquer partes nele contido é expressamente proibida.\n\ \n\
+    11.4.  O QUALITY SERVICES reserva a si todos os direitos ao APLICATIVO não expressamente concedidos aqui.\n\ \n\
+    12. ALTERAÇÕES, MODIFICAÇÕES E RESCISÃO \n\ \n\
+    12.1. A QUALITY SERVICES reserva-se no direito de, a qualquer tempo, modificar estes termos seja incluindo, removendo ou alterando quaisquer de suas cláusulas. Tais modificações terão efeito imediato. Após publicadas tais alterações, ao continuar com o uso do aplicativo você terá aceitado e concordado em cumprir os termos modificados.\n\ \n\
+    12.2. A QUALITY SERVICES pode, de tempos em tempos, modificar ou descontinuar (temporária ou permanentemente) a distribuição ou a atualização deste aplicativo. A QUALITY SERVICES não é obrigada a fornecer nenhum serviço de suporte para este aplicativo. \n\ \n\
+    12.3 O usuário não poderá responsabilizar a QUALITY SERVICES nem seus diretores, executivos, funcionários, afiliados, agentes, contratados ou licenciadores por quaisquer modificações, suspensões ou descontinuidade do aplicativo.\n\ \n\
+    13. CONSENTIMENTO PARA COLETA E USO DE DADOS\n\ \n\
+    13.1. Você concorda que a QUALITY SERVICES pode coletar e usar dados técnicos de seu dispositivo tais como especificações, configurações, versões de sistema operacional, tipo de conexão à internet e afins.\n\ \n\
+    14.    CONDIÇÕES GERAIS\n\ \n\
+    14.1.  O QUALITY SERVICES poderá alterar, a qualquer tempo, de forma \n\ \n\
+    unilateral e sem aviso prévio, o conteúdo e funcionalidades do APLICATIVO.\n\ \n\
+    14.2.  O QUALITY SERVICES se reserva o direito de alterar os termos e condições do presente TERMO a qualquer momento, devendo informar os PACIENTES de quaisquer alterações efetuadas.\n\ \n\
+    14.2.1.   O PACIENTE se compromete a ler e se atualizar sobre este TERMO. Caso não queira aceitar qualquer alteração efetuada no TERMO, o PACIENTE deverá rescindir seu contrato com o QUALITY SERVICES por meio de comunicação realizada aos canais de atendimento disponibilizados pelo QUALITY SERVICES.\n\ \n\
+    14.2.2.   As alterações entrarão em vigor automaticamente na data da publicação da nova versão do APLICATIVO e/ou do Site do QUALITY SERVICES, devendo ficar disponível a todos os PACIENTES.\n\ \n\
+    14.2.3.   Ao cadastrar-se como PACIENTE no APLICATIVO e aceitar o presente TERMO e utilizar os serviços prestados pelo QUALITY SERVICES, o PACIENTE declara automaticamente e incondicionalmente estar de acordo com este TERMO e todas as demais políticas e regras disponibilizadas no APLICATIVO.\n\ \n\
+    14.3.  O PACIENTE terá acesso à uma plataforma exclusiva, comprometendo-se, portanto, a não utilizar quaisquer informações às quais tenha acesso por meio ou em razão do presente TERMO para competir com as atividades desenvolvidas pelo QUALITY SERVICES.\n\ \n\
+    14.4.  Caso qualquer cláusula, termo ou disposição deste TERMO seja declarada nula, tal nulidade não afetará quaisquer outras cláusulas, termos ou disposições aqui contidas, as quais permanecerão em pleno vigor e efeito.\n\ \n\
+    14.5.  A tolerância por qualquer uma das Partes com relação a qualquer violação do presente TERMO ou sua omissão no exercício de qualquer direito outorgado pelo mesmo, não será considerado como novação ou renúncia em relação a qualquer violação futura, seja semelhante ou não, ou ao exercício por qualquer uma das partes de qualquer direito futuro conferido por este TERMO.\n\ \n\
+    14.6.  Caso surja qualquer desavença entre a QUALITY SERVICES e o PACIENTE, estes se comprometem em resolver a desavença de forma amigável. Caso o QUALITY SERVICES e o PACIENTE não alcancem um acordo no prazo máximo de 30 (trinta) dias sobre qualquer desavença e/ou disputa oriunda deste TERMO, deverão encaminhar o litígio para o foro da Comarca de São Paulo, Estado de São Paulo, com renúncia expressa de qualquer outro, por mais privilegiado que seja, o qual o QUALITY SERVICES e o PACIENTE ora elegem, sendo aplicadas as leis brasileiras para dirimir quaisquer questões ou litígios oriundos do presente TERMO.\n\ \n\
+    14.7.	Caso reste qualquer dúvida a respeito do conteúdo do presente instrumento, por favor, contate o QUALITY SERVICES através do email sac@qualityservices.net.br.\n\ \n\
+    Ao aceitar esses termos de uso você também aceita os Termos de Serviço(https://www.google.com/policies/terms) e Política de Privacidade(https://www.google.com/policies/terms) do Google.\n\ \n\
+    </string>
+    <string name="tvCad2Segs">59s</string>
+
+
+</resources>
