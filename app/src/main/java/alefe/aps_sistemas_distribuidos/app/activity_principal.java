@@ -3,11 +3,8 @@ package alefe.aps_sistemas_distribuidos.app;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-
-import alefe.aps_sistemas_distribuidos.app.R;
 
 public class activity_principal extends AppCompatActivity implements View.OnClickListener
 {
@@ -29,9 +26,9 @@ public class activity_principal extends AppCompatActivity implements View.OnClic
         //////////////////////////////////
 
         //  ImageView's //
-        ImageView ivPriRanking       =  findViewById(R.id.ivPriRanking);
-        ImageView ivPriBuscarapida   =  findViewById(R.id.ivPriBuscarapida);
-        ImageView ivPriAjuda         =  findViewById(R.id.ivPriAjuda);
+        ImageView ivPriRanking     =  findViewById(R.id.ivPriRanking);
+        ImageView ivPriPesquisar   =  findViewById(R.id.ivPriPesquisar);
+        ImageView ivPriDuvidas     =  findViewById(R.id.ivPriDuvidas);
 
 
 
@@ -40,8 +37,8 @@ public class activity_principal extends AppCompatActivity implements View.OnClic
         //////////////////////////////////
 
         ivPriRanking.setOnClickListener((View.OnClickListener) this);
-        ivPriBuscarapida.setOnClickListener((View.OnClickListener) this);
-        ivPriAjuda.setOnClickListener((View.OnClickListener) this);
+        ivPriPesquisar.setOnClickListener((View.OnClickListener) this);
+        ivPriDuvidas.setOnClickListener((View.OnClickListener) this);
 
     }
 
@@ -118,28 +115,28 @@ public class activity_principal extends AppCompatActivity implements View.OnClic
                 //  Log de onClick //
                 //Log.d("tag","onClick no ivPriRanking");
 
-                Intent intentPriRanking = new Intent(activity_principal.this, activity_ranking.class);
+                Intent intentPriRanking = new Intent(activity_principal.this, activity_rankinglocais.class);
                 startActivity(intentPriRanking);
                 break;
 
 
 
-            case R.id.ivPriBuscarapida:
+            case R.id.ivPriPesquisar:
                 //  Log de onClick //
-                //Log.d("tag","onClick no ivPriBuscarapida");
+                //Log.d("tag","onClick no ivPriPesquisar");
 
-                Intent intentPriBuscaRapida = new Intent(activity_principal.this, activity_buscarapida.class);
-                startActivity(intentPriBuscaRapida);
+                Intent intentPriPesquisar = new Intent(activity_principal.this, activity_pesquisarlocais.class);
+                startActivity(intentPriPesquisar);
                 break;
 
 
 
-            case R.id.ivPriAjuda:
+            case R.id.ivPriDuvidas:
                 //  Log de onClick //
-                //Log.d("tag","onClick no ivPriAjuda");
+                //Log.d("tag","onClick no ivPriDuvidas");
 
-                Intent intentPriFaleConosco = new Intent(activity_principal.this, activity_ajuda.class);
-                startActivity(intentPriFaleConosco);
+                Intent intentPriDuvidas = new Intent(activity_principal.this, activity_duvidasfreq.class);
+                startActivity(intentPriDuvidas);
                 break;
         }
     }

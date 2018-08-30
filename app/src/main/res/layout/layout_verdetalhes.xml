@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/tvVDRNomeLabel"
+        android:text="@string/tvVDNomeLabel"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/tvVDREnderecoLabel"
+        android:text="@string/tvVDPoluicaoarLabel"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +100,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/tvVDRTempoesperaLabel"
+        android:text="@string/tvVDTransitoLabel"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,7 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/tvVDRDistanciaLabel"
+        android:text="@string/tvVDAlagamentoLabel"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/tvVDRNotageralLabel"
+        android:text="@string/tvVDDesmatamentoLabel"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -209,7 +209,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="26dp"
-        android:text="@string/tvVDRSelecioneLabel"
+        android:text="@string/tvVDSelecioneLabel"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -234,7 +234,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="@string/tvVDRMapsLabel"
+        android:text="@string/tvVDMapsLabel"
         app:layout_constraintEnd_toEndOf="@+id/ivMaps"
         app:layout_constraintStart_toStartOf="@+id/ivMaps"
         app:layout_constraintTop_toBottomOf="@+id/ivMaps" />
@@ -257,47 +257,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="@string/tvVDRWazeLabel"
+        android:text="@string/tvVDWazeLabel"
         app:layout_constraintEnd_toEndOf="@+id/ivWaze"
         app:layout_constraintStart_toStartOf="@+id/ivWaze"
         app:layout_constraintTop_toBottomOf="@+id/ivWaze" />
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cvVDRAvaliar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        app:cardBackgroundColor="@color/colorAccent"
-        app:cardCornerRadius="7dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMaps">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tvVDRAvaliar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="6dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="4dp"
-                android:text="@string/tvVDRAvaliarLabel"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-
-        </RelativeLayout>
-
-    </android.support.v7.widget.CardView>
 
     <ProgressBar
         android:id="@+id/vdCarregando"

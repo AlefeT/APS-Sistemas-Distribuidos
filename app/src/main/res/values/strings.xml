@@ -5,52 +5,45 @@
     <string name="ivGeralAPSDesc">TODO</string>
 
 
-    <!-- Busca Rapida -->
-    <string name="tvBRaTitulo1Label">Busca Rápida - Pronto Atendimento</string>
-    <string name="tvBRaFiltro1Label">Hospital:</string>
-    <string name="etBraFiltro1Hint">Ex.: Hospital Albert Einstein</string>
-    <string name="tvBRaFiltro2Label">Convênio:</string>
-    <string name="tvBRaFiltro3Label">Distância:</string>
-    <string name="tvBRaOuLabel">ou</string>
-    <string name="tvBRaFiltro4Label">Tempo de Espera:</string>
-    <string name="tvBRaObs1Label">Nota: Todos os campos são opcionais, no entanto, é necessário preencher ao menos um.</string>
-    <string name="btBRaBuscarLabel">Buscar</string>
+    <!-- Pesquisar Locais -->
+    <string name="tvPLTituloLabel">Pesquisar Locais</string>
+    <string name="tvPLFiltro1Label">Local:</string>
+    <string name="etPLFiltro1Hint">Ex.: Parque Ibirapuera</string>
+    <string name="tvPLFiltro2Label">Poluição do Ar:</string>
+    <string name="tvPLFiltro3Label">Propenso à Trânsito:</string>
+    <string name="tvPLFiltro4Label">Propenso à Alagamento:</string>
+    <string name="tvPLFiltro5Label">Propenso à Inundações:</string>
+    <string name="tvPLFiltro6Label">Nível de Desmatamento:</string>
+    <string name="tvPLOuLabel">ou</string>
+    <string name="tvPLObs1Label">Nota: Todos os campos são opcionais, no entanto, é necessário preencher ao menos um.</string>
+    <string name="btPLPesquisarLabel">Pesquisar</string>
     <string name="strNadaSelecionado">Nenhum filtro foi especificado.\n\Por favor preencha ao menos um filtro.</string>
-    <string name="strHospitalEspecifico">Devido a um hospital específico ter sido selecionado, os demais filtros serão ignorados.</string>
-    <string name="strHospitalInvalido">Hospital inválido.</string>
+    <string name="strLocalEspecifico">Devido a um local específico ter sido selecionado, os demais filtros serão ignorados.</string>
+    <string name="strLocalInvalido">Local inválido.</string>
 
 
-    <!-- Resultado Busca -->
-    <string name="tvNenhumencontradoLabel">Nenhum hospital encontrado.</string>
+    <!-- Resultado Pesquisa -->
+    <string name="tvNenhumencontradoLabel">Nenhum local encontrado.</string>
 
 
     <!-- Ver Detalhes -->
-    <string name="tvVDRNomeLabel">Nome:</string>
-    <string name="tvVDREnderecoLabel">Endereço:</string>
-    <string name="tvVDRTempoesperaLabel">Tempo de Espera:</string>
-    <string name="tvVDRDistanciaLabel">Distância:</string>
-    <string name="tvVDREspecialidadeLabel">Especialidade:</string>
-    <string name="tvVDRNotageralLabel">Nota Geral:</string>
-    <string name="tvVDRSelecioneLabel">Selecione seu mapa de navegação:</string>
-    <string name="tvVDRAvaliarLabel">Clique Aqui para contribuir com os demais usuários fazendo sua Avaliação deste hospital.</string>
-    <string name="tvVDRMapsLabel">Google Maps</string>
-    <string name="tvVDRWazeLabel">Waze</string>
+    <string name="tvVDNomeLabel">Nome:</string>
+    <string name="tvVDPoluicaoarLabel">Poluição do Ar:</string>
+    <string name="tvVDTransitoLabel">Propenso à Trânsito:</string>
+    <string name="tvVDAlagamentoLabel">Propenso à Alagamento:</string>
+    <string name="tvVDInundacoesLabel">Propenso à Inundações:</string>
+    <string name="tvVDDesmatamentoLabel">Nível de Desmatamento:</string>
+    <string name="tvVDSelecioneLabel">Caso deseje, visualize este local diretamente nos Apps:</string>
+    <string name="tvVDMapsLabel">Google Maps</string>
+    <string name="tvVDWazeLabel">Waze</string>
 
 
-    <!-- Ajuda -->
-    <string name="tvAjuTituloLabel">Ajuda sobre o App</string>
-    <string name="tvAjuBuscrapLabel">Como eu faço uma pesquisa rápida?</string>
-    <string name="tvAjuBuscrapRLabel">\n\<b>Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Busca Rápida".\n\ \n\<b>Segundo passo:</b>\n\Informe parte do nome do hospital desejado e o selecione na lista que será exibida OU os filtros que deseja utilizar na busca.\n\ \n\<b>Terceiro passo:</b>\n\Clique no botão "Buscar" para ser enviado à tela de resultados, onde você irá encontrar uma lista com todos os hospitais que se encaixam na busca.\n\ \n\<b>Quarto passo:</b>\n\Clique no botão "Ver Detalhes" do hospital que deseja para ver mais detalhes sobre o hospital.\n\ \n\</string>
-    <string name="tvAjuBuscavaLabel">Como eu faço uma pesquisa avançada?</string>
-    <string name="tvAjuBuscavaRLabel">\n\<b>Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Busca Avançada".\n\ \n\<b>Segundo passo:</b>\n\Informe parte do nome do hospital desejado e o selecione na lista que será exibida OU os filtros que deseja utilizar na busca.\n\ \n\<b>Terceiro passo:</b>\n\Clique no botão "Pesquisar" para ser enviado à tela de resultados, onde você irá encontrar uma lista com todos os hospitais que se encaixam na busca.\n\ \n\<b>Quarto passo:</b>\n\Clique no botão "Ver Detalhes" do hospital que deseja para ver mais detalhes sobre o hospital.\n\ \n\</string>
-    <string name="tvAjuAvaliarLabel">Como eu avalio um hospital?</string>
-    <string name="tvAjuAvaliarRLabel">\n\<b>Alternativa 1\n\ \n\Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Avaliar Hospital".\n\ \n\<b>Segundo passo:</b>\n\Informe parte do nome do hospital desejado e o selecione na lista que será exibida.\n\ \n\<b>Terceiro passo:</b>\n\Informe a data em que foi realizado o atendimento.\n\ \n\<b>Quarto passo:</b>\n\Informe a nota em cada um dos quesitos do hospital selecionado, (como Recepção, Organização, Limpeza, etc) preenchendo as estrelas de 0 a 5.\n\Caso não tenha utilizado algum quesito, marque a caixa "Não utilizei" do mesmo.\n\Caso deseje, poderá também escrever um comentário ou observação deste hospital ao final da página.\n\ \n\<b>Quinto passo:</b>\n\Clique no botão "Enviar Avaliação" para concluir o processo e enviar sua avaliação sobre este hospital.\n\ \n\ \n\ \n\<b>Alternativa 2\n\ \n\Primeiro passo:</b>\n\Após executar uma pesquisa e acessar a página de "Ver Detalhes" do hospital desejado (caso necessário, verificar a seção "Como eu faço uma pesquisa rápida/avançada?").\n\Clicar no botão "Clique Aqui para contribuir com os demais usuários fazendo sua Avaliação deste hospital." para ser enviado para a tela de avaliar o hospital.\n\ \n\<b>Segundo passo:</b>\n\Seguir as intruções informadas a partir do Passo 3 da Alternativa 1.\n\ \n\</string>
-    <string name="tvAjuEditperfLabel">Como posso editar meu perfil?</string>
-    <string name="tvAjuEditperfRLabel">\n\<b>Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Meu Perfil".\n\ \n\<b>Segundo passo:</b>\n\Clique no botão "Editar" para ser enviado à tela de edição.\n\ \n\<b>Terceiro passo:</b>\n\Preencha os campos (CEP e/ou E-mail) que deseja alterar.\n\Nota: Caso deseje alterar outras informações, por favor entre em contato com nossos atendentes por meio do "Fale Conosco".\n\ \n\<b>Quarto passo:</b>\n\Clique no botão "Salvar" para concluir o processo e salvar suas alterações.\n\ \n\</string>
-    <string name="tvAjuContatoLabel">Como eu entro em contato com o suporte?</string>
-    <string name="tvAjuContatoRLabel">\n\<b>Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Fale Conosco".\n\ \n\<b>Segundo passo:</b>\n\Clique no botão referente ao meio de contato que mais lhe agrada (Telefone, E-mail, Facebook, etc), para ser enviado para a plataforma desejada e poder conversar com um de nossos atendentes.\n\ \n\</string>
-    <string name="tvAjuRankingLabel">Como posso ver os melhores hospitais?</string>
-    <string name="tvAjuRankingRLabel">\n\<b>Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Ranking".\n\ \n\<b>Segundo passo:</b>\n\Nesta tela, você poderá visualizar a lista dos melhores hospitais do Brasil segundo as avaliações dos usuários.\n\ \n\</string>
+    <!-- Duvidas Frequentes -->
+    <string name="tvDuvTituloLabel">Dúvidas Frequentes sobre o App</string>
+    <string name="tvDuvPesquisaLabel">Como eu Pesquiso um Local?</string>
+    <string name="tvDuvPesquisaRLabel">\n\<b>Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Pesquisar Locais".\n\ \n\<b>Segundo passo:</b>\n\Informe parte do nome do local desejado e o selecione na lista que será exibida OU informe os filtros que deseja utilizar na busca.\n\ \n\<b>Terceiro passo:</b>\n\Clique no botão "Pesquisar" para ser enviado à tela de Resultados, onde você irá encontrar uma lista com todos os locais que se encaixam na busca.\n\ \n\<b>Quarto passo:</b>\n\Clique no botão "Ver Detalhes" do local que deseja para ver mais detalhes sobre o local.\n\ \n\</string>
+    <string name="tvDuvRankingLabel">Como posso ver os melhores Locais?</string>
+    <string name="tvDuvRankingRLabel">\n\<b>Primeiro passo:</b>\n\Volte à tela inicial e escolha a opção "Ranking de Locais".\n\ \n\<b>Segundo passo:</b>\n\Nesta tela, você poderá visualizar a lista dos melhores locais.\n\ \n\</string>
 
 
 </resources>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="alefe.aps_sistemas_distribuidos.app.activity_duvidasfreq">
+
+<android.support.v7.widget.Toolbar
+    android:id="@+id/tbDuvToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="@color/colorPrimary"
+    android:elevation="4dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <ImageView
+        android:id="@+id/ivDuvArrowback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/ivGeralAPSDesc"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08"
+        app:srcCompat="@drawable/ic_arrowbackwhite" />
+
+    <TextView
+        android:id="@+id/tvDuvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:text="@string/app_name"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="65dp" />
+
+</android.support.v7.widget.Toolbar>
+
+<TextView
+    android:id="@+id/tvDuvTitulo1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="20dp"
+    android:text="@string/tvDuvTituloLabel"
+    android:textColor="#080808"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.045"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tbDuvToolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvDuvTitulo1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" >
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvDuvPesquisar"
+                android:layout_width="match_parent"
+                android:minHeight="60dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#170a5920"
+                app:cardCornerRadius="2dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvDuvPesquisar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_centerInParent="true"
+                        android:text="@string/tvDuvPesquisaLabel"
+                        android:textColor="#07200e"
+                        android:textSize="16sp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/tvDuvPesquisarR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#303030"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/cvDuvPesquisar"
+                app:layout_constraintStart_toStartOf="@+id/cvDuvPesquisar"
+                app:layout_constraintEnd_toEndOf="@+id/cvDuvPesquisar"
+                android:text="@string/tvDuvPesquisaRLabel" />
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvDuvRanking"
+                android:layout_width="match_parent"
+                android:minHeight="60dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#170a5920"
+                app:cardCornerRadius="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvDuvPesquisarR" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvDuvRanking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_centerInParent="true"
+                        android:text="@string/tvDuvRankingLabel"
+                        android:textColor="#07200e"
+                        android:textSize="16sp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/tvDuvRankingR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#303030"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/cvDuvRanking"
+                app:layout_constraintStart_toStartOf="@+id/cvDuvRanking"
+                app:layout_constraintEnd_toEndOf="@+id/cvDuvRanking"
+                android:text="@string/tvDuvRankingRLabel" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvDuvRankingR"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

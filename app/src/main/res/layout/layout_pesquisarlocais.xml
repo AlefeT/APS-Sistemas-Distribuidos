@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="alefe.aps_sistemas_distribuidos.app.activity_pesquisarlocais">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbBRaToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:id="@+id/ivBRaArrowback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/ivGeralAPSDesc"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.08"
+            app:srcCompat="@drawable/ic_arrowbackwhite" />
+
+        <TextView
+            android:id="@+id/tvBRaTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitCenter"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="65dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvBRaTitulo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:text="@string/tvPLTituloLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbBRaToolbar" />
+
+    <ScrollView
+        android:id="@+id/svBRaSC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBRaTitulo1">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvBRaFiltro1"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/tvPLFiltro1Label"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <AutoCompleteTextView
+                android:id="@+id/actvBraHospital"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                android:completionThreshold="3"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="14dp"
+                android:hint="@string/etPLFiltro1Hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvBRaFiltro1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvBraHospinv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/strLocalInvalido"
+                android:textColor="#dcaf01"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/actvBraHospital"
+                app:layout_constraintStart_toStartOf="@+id/tvBRaFiltro1"
+                app:layout_constraintEnd_toEndOf="@+id/actvBraHospital"/>
+
+            <TextView
+                android:id="@+id/tvBRaFiltro2"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/tvPLFiltro2Label"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spBraTempoespera" />
+
+            <Spinner
+                android:id="@+id/spBraConvenio"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvBRaFiltro2"
+                app:layout_constraintTop_toBottomOf="@+id/spBraTempoespera" />
+
+
+            <TextView
+                android:id="@+id/tvBRaFiltro3"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/tvPLFiltro3Label"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBraOu" />
+
+            <View
+                android:id="@+id/vLogLinha1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="22dp"
+                android:background="#9c9c9c"
+                app:layout_constraintEnd_toStartOf="@+id/tvBraOu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBraHospinv" />
+
+            <TextView
+                android:id="@+id/tvBraOu"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/tvPLOuLabel"
+                android:textColor="#808080"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/vLogLinha1"
+                app:layout_constraintEnd_toStartOf="@+id/vLogLinha2"
+                app:layout_constraintTop_toBottomOf="@+id/tvBraHospinv" />
+
+            <View
+                android:id="@+id/vLogLinha2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginTop="22dp"
+                android:background="#9c9c9c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvBraOu"
+                app:layout_constraintTop_toBottomOf="@+id/tvBraHospinv" />
+
+
+            <Spinner
+                android:id="@+id/spBraDistancia"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvBRaFiltro3"
+                app:layout_constraintTop_toBottomOf="@+id/tvBraOu" />
+
+            <View
+                android:id="@+id/vBRaDistancia"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="4dp"
+                android:background="#00ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvBRaFiltro3"
+                app:layout_constraintTop_toBottomOf="@+id/tvBraOu" />
+
+            <TextView
+                android:id="@+id/tvBRaFiltro4"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/tvPLFiltro4Label"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spBraDistancia" />
+
+            <Spinner
+                android:id="@+id/spBraTempoespera"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvBRaFiltro4"
+                app:layout_constraintTop_toBottomOf="@+id/spBraDistancia" />
+
+            <TextView
+                android:id="@+id/tvBRaObs1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="36dp"
+                android:text="@string/tvPLObs1Label"
+                android:textColor="#808080"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/spBraConvenio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spBraConvenio" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvBRaBuscar"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBRaObs1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ivBRaBuscar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_centerInParent="true"
+                        android:text="@string/btPLPesquisarLabel"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:src="@drawable/ic_searchwhite"
+                        android:layout_alignParentStart="true"
+                        android:contentDescription="@string/ivGeralAPSDesc" />
+
+                    <TextView
+                        android:id="@+id/tvBRaBuscar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/btPLPesquisarLabel"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"  />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/pbBuscando"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cvBRaBuscar"
+                app:layout_constraintVertical_bias="0.161" />
+
+            <View
+                android:id="@+id/vBAvFim"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="26dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cvBRaBuscar" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/pbCarregandolista"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbBRaToolbar"
+        app:layout_constraintVertical_bias="0.106" />
+
+</android.support.constraint.ConstraintLayout>

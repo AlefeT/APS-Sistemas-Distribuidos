@@ -31,15 +31,15 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="alefe.aps_sistemas_distribuidos.app.activity_ranking"
+            android:name="alefe.aps_sistemas_distribuidos.app.activity_rankinglocais"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="alefe.aps_sistemas_distribuidos.app.activity_buscarapida"
+            android:name="alefe.aps_sistemas_distribuidos.app.activity_pesquisarlocais"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="alefe.aps_sistemas_distribuidos.app.activity_resultadobusca"
+            android:name="alefe.aps_sistemas_distribuidos.app.activity_resultadopesquisa"
             android:screenOrientation="portrait" />
 
         <activity
@@ -47,7 +47,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="alefe.aps_sistemas_distribuidos.app.activity_ajuda"
+            android:name="alefe.aps_sistemas_distribuidos.app.activity_duvidasfreq"
             android:screenOrientation="portrait" />
 
     </application>
