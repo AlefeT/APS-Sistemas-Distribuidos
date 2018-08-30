@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="womm.quality_services.app">
+    package="alefe.aps_sistemas_distribuidos.app">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="womm.quality_services.app.activity_splashscreen"
+            android:name="alefe.aps_sistemas_distribuidos.app.activity_splashscreen"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,75 +27,27 @@
         </activity>
 
         <activity
-            android:name="womm.quality_services.app.activity_login"
+            android:name="alefe.aps_sistemas_distribuidos.app.activity_principal"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="womm.quality_services.app.activity_principal"
+            android:name="alefe.aps_sistemas_distribuidos.app.activity_ranking"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="womm.quality_services.app.activity_ranking"
+            android:name="alefe.aps_sistemas_distribuidos.app.activity_buscarapida"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="womm.quality_services.app.activity_buscarapida"
+            android:name="alefe.aps_sistemas_distribuidos.app.activity_resultadobusca"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="womm.quality_services.app.activity_avaliar"
+            android:name="alefe.aps_sistemas_distribuidos.app.activity_verdetalhes"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="womm.quality_services.app.activity_resultadobusca"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="womm.quality_services.app.activity_verdetalhes"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="womm.quality_services.app.activity_avaliarvd"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="womm.quality_services.app.activity_perfil"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="womm.quality_services.app.activity_editperfil"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="womm.quality_services.app.activity_faleconosco"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="womm.quality_services.app.activity_buscaavancada"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="womm.quality_services.app.activity_ajuda"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="womm.quality_services.app.activity_esqueceu"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="womm.quality_services.app.activity_cadastro1"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="womm.quality_services.app.activity_termos"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="womm.quality_services.app.activity_cadastro2"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="womm.quality_services.app.activity_cadastro3"
+            android:name="alefe.aps_sistemas_distribuidos.app.activity_ajuda"
             android:screenOrientation="portrait" />
 
     </application>

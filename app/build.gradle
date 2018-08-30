@@ -9,7 +9,7 @@ android {
     }
     compileSdkVersion 27
     defaultConfig {
-        applicationId "womm.quality_services.app"
+        applicationId "alefe.aps_sistemas_distribuidos.app"
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 202

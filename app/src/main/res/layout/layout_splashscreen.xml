@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="womm.quality_services.app.activity_splashscreen">
+    tools:context="alefe.aps_sistemas_distribuidos.app.activity_splashscreen">
 
     <ImageView
         android:id="@+id/imageView"
@@ -14,12 +14,12 @@
         android:layout_marginEnd="70dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="70dp"
-        android:src="@drawable/logo_qs"
+        android:src="@drawable/logo_aps"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/ivGeralQualityServicesDesc" />
+        android:contentDescription="@string/ivGeralAPSDesc" />
 
     <ProgressBar
         android:id="@+id/progressBar2"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="womm.quality_services.app.activity_buscarapida">
+    tools:context="alefe.aps_sistemas_distribuidos.app.activity_buscarapida">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/tbBRaToolbar"
@@ -23,7 +23,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:contentDescription="@string/ivGeralQualityServicesDesc"
+            android:contentDescription="@string/ivGeralAPSDesc"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -285,7 +285,7 @@
                         android:textStyle="bold"
                         android:src="@drawable/ic_searchwhite"
                         android:layout_alignParentStart="true"
-                        android:contentDescription="@string/ivGeralQualityServicesDesc" />
+                        android:contentDescription="@string/ivGeralAPSDesc" />
 
                     <TextView
                         android:id="@+id/tvBRaBuscar"
