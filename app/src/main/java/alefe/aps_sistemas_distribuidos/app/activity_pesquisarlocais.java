@@ -49,19 +49,19 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
         //////////////////////////////////
 
         //  ImageView's //
-        ImageView ivBRaArrowback = findViewById(R.id.ivBRaArrowback);
+        ImageView ivBRaArrowback = findViewById(R.id.ivPLArrowback);
 
         //  Spinner's //
-        spBraTempoespera         = findViewById(R.id.spBraTempoespera);
+        spBraTempoespera         = findViewById(R.id.spPLAlagamento);
 
         //  AutoCompleteTextView's //
-        actvBraHospital          = findViewById(R.id.actvBraHospital);
+        actvBraHospital          = findViewById(R.id.actvPLLocal);
 
         //  CardView's  //
         CardView cvBRaBuscar     = findViewById(R.id.cvBRaBuscar);
 
         //  TextView's  //
-        tvBraHospinv             = findViewById(R.id.tvBraHospinv);
+        tvBraHospinv             = findViewById(R.id.tvPLLocalinv);
 
         //  ProgressBar's   //
         pbBuscando               = findViewById(R.id.pbBuscando);
@@ -199,7 +199,7 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
         public void onFocusChange(View v, boolean hasFocus)
         {
             //Log.v("tag", "Focus changed");
-            if (v.getId() == R.id.actvBraHospital && !hasFocus)
+            if (v.getId() == R.id.actvPLLocal && !hasFocus)
             {
                 //Log.v("tag", "Performing hospital validation");
                 ((AutoCompleteTextView) v).performValidation();
@@ -286,7 +286,7 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
     {
         switch (view.getId())
         {
-            case R.id.ivBRaArrowback:
+            case R.id.ivPLArrowback:
                 //  Log de onClick  //
                 //Log.d("tag", "onClick no ArrowLeft");
 

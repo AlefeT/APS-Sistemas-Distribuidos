@@ -7,13 +7,13 @@
 
     <!-- Pesquisar Locais -->
     <string name="tvPLTituloLabel">Pesquisar Locais</string>
-    <string name="tvPLFiltro1Label">Local:</string>
-    <string name="etPLFiltro1Hint">Ex.: Parque Ibirapuera</string>
-    <string name="tvPLFiltro2Label">Poluição do Ar:</string>
-    <string name="tvPLFiltro3Label">Propenso à Trânsito:</string>
-    <string name="tvPLFiltro4Label">Propenso à Alagamento:</string>
-    <string name="tvPLFiltro5Label">Propenso à Inundações:</string>
-    <string name="tvPLFiltro6Label">Nível de Desmatamento:</string>
+    <string name="tvPLLocalLabel">Local:</string>
+    <string name="etPLLocalHint">Ex.: Parque Ibirapuera</string>
+    <string name="tvPLPoluicaoLabel">Poluição do Ar:</string>
+    <string name="tvPLTransitoLabel">Propenso à Trânsito:</string>
+    <string name="tvPLAlagamentoLabel">Propenso à Alagamento:</string>
+    <string name="tvPLInundacoesLabel">Propenso à Inundações:</string>
+    <string name="tvPLDesmatamentoLabel">Nível de Desmatamento:</string>
     <string name="tvPLOuLabel">ou</string>
     <string name="tvPLObs1Label">Nota: Todos os campos são opcionais, no entanto, é necessário preencher ao menos um.</string>
     <string name="btPLPesquisarLabel">Pesquisar</string>

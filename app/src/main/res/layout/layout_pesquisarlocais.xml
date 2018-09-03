@@ -7,7 +7,7 @@
     tools:context="alefe.aps_sistemas_distribuidos.app.activity_pesquisarlocais">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/tbBRaToolbar"
+        android:id="@+id/tbPLToolbar"
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:background="@color/colorPrimary"
@@ -15,7 +15,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         <ImageView
-            android:id="@+id/ivBRaArrowback"
+            android:id="@+id/ivPLArrowback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -33,7 +33,7 @@
             app:srcCompat="@drawable/ic_arrowbackwhite" />
 
         <TextView
-            android:id="@+id/tvBRaTitulo"
+            android:id="@+id/tvPLTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -53,7 +53,7 @@
     </android.support.v7.widget.Toolbar>
 
     <TextView
-        android:id="@+id/tvBRaTitulo1"
+        android:id="@+id/tvPLTitulo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -66,36 +66,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbBRaToolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/tbPLToolbar" />
 
     <ScrollView
-        android:id="@+id/svBRaSC"
+        android:id="@+id/svPLSC"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvBRaTitulo1">
+        app:layout_constraintTop_toBottomOf="@+id/tvPLTitulo1">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id/tvBRaFiltro1"
+                android:id="@+id/tvPLFiltro1"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="26dp"
-                android:text="@string/tvPLFiltro1Label"
+                android:text="@string/tvPLLocalLabel"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <AutoCompleteTextView
-                android:id="@+id/actvBraHospital"
+                android:id="@+id/actvPLLocal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -104,58 +104,21 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginTop="14dp"
-                android:hint="@string/etPLFiltro1Hint"
+                android:hint="@string/etPLLocalHint"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvBRaFiltro1"
+                app:layout_constraintStart_toEndOf="@+id/tvPLFiltro1"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvBraHospinv"
+                android:id="@+id/tvPLLocalinv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/strLocalInvalido"
                 android:textColor="#dcaf01"
                 android:visibility="gone"
-                app:layout_constraintTop_toBottomOf="@+id/actvBraHospital"
-                app:layout_constraintStart_toStartOf="@+id/tvBRaFiltro1"
-                app:layout_constraintEnd_toEndOf="@+id/actvBraHospital"/>
-
-            <TextView
-                android:id="@+id/tvBRaFiltro2"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="18dp"
-                android:text="@string/tvPLFiltro2Label"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spBraTempoespera" />
-
-            <Spinner
-                android:id="@+id/spBraConvenio"
-                android:layout_width="0dp"
-                android:layout_height="26dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/tvBRaFiltro2"
-                app:layout_constraintTop_toBottomOf="@+id/spBraTempoespera" />
-
-
-            <TextView
-                android:id="@+id/tvBRaFiltro3"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/tvPLFiltro3Label"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvBraOu" />
+                app:layout_constraintTop_toBottomOf="@+id/actvPLLocal"
+                app:layout_constraintStart_toStartOf="@+id/tvPLFiltro1"
+                app:layout_constraintEnd_toEndOf="@+id/actvPLLocal"/>
 
             <View
                 android:id="@+id/vLogLinha1"
@@ -167,7 +130,7 @@
                 android:background="#9c9c9c"
                 app:layout_constraintEnd_toStartOf="@+id/tvBraOu"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvBraHospinv" />
+                app:layout_constraintTop_toBottomOf="@+id/tvPLLocalinv" />
 
             <TextView
                 android:id="@+id/tvBraOu"
@@ -180,7 +143,7 @@
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/vLogLinha1"
                 app:layout_constraintEnd_toStartOf="@+id/vLogLinha2"
-                app:layout_constraintTop_toBottomOf="@+id/tvBraHospinv" />
+                app:layout_constraintTop_toBottomOf="@+id/tvPLLocalinv" />
 
             <View
                 android:id="@+id/vLogLinha2"
@@ -192,54 +155,123 @@
                 android:background="#9c9c9c"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tvBraOu"
-                app:layout_constraintTop_toBottomOf="@+id/tvBraHospinv" />
+                app:layout_constraintTop_toBottomOf="@+id/tvPLLocalinv" />
 
+            <TextView
+                android:id="@+id/tvPLPoluicao"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/tvPLPoluicaoLabel"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBraOu" />
 
             <Spinner
-                android:id="@+id/spBraDistancia"
+                android:id="@+id/spPLPoluicao"
                 android:layout_width="0dp"
                 android:layout_height="26dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvBRaFiltro3"
-                app:layout_constraintTop_toBottomOf="@+id/tvBraOu" />
-
-            <View
-                android:id="@+id/vBRaDistancia"
-                android:layout_width="0dp"
-                android:layout_height="30dp"
-                android:layout_marginEnd="14dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="4dp"
-                android:background="#00ffffff"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvBRaFiltro3"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvPLPoluicao"
                 app:layout_constraintTop_toBottomOf="@+id/tvBraOu" />
 
             <TextView
-                android:id="@+id/tvBRaFiltro4"
+                android:id="@+id/tvPLTransito"
+                android:layout_width="130dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/tvPLTransitoLabel"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spPLPoluicao" />
+
+            <Spinner
+                android:id="@+id/spPLTransito"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvPLTransito"
+                app:layout_constraintTop_toBottomOf="@+id/spPLPoluicao" />
+
+            <TextView
+                android:id="@+id/tvPLAlagamento"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="18dp"
-                android:text="@string/tvPLFiltro4Label"
+                android:text="@string/tvPLAlagamentoLabel"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spBraDistancia" />
+                app:layout_constraintTop_toBottomOf="@+id/spPLTransito" />
 
             <Spinner
-                android:id="@+id/spBraTempoespera"
+                android:id="@+id/spPLAlagamento"
                 android:layout_width="0dp"
                 android:layout_height="26dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvBRaFiltro4"
-                app:layout_constraintTop_toBottomOf="@+id/spBraDistancia" />
+                app:layout_constraintStart_toEndOf="@+id/tvPLAlagamento"
+                app:layout_constraintTop_toBottomOf="@+id/spPLTransito" />
+
+            <TextView
+                android:id="@+id/tvPLInundacoes"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/tvPLInundacoesLabel"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spPLAlagamento" />
+
+            <Spinner
+                android:id="@+id/spPLInundacoes"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvPLInundacoes"
+                app:layout_constraintTop_toBottomOf="@+id/spPLAlagamento" />
+
+            <TextView
+                android:id="@+id/tvPLDesmatamento"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/tvPLDesmatamentoLabel"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spPLInundacoes" />
+
+            <Spinner
+                android:id="@+id/spPLDesmatamento"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvPLDesmatamento"
+                app:layout_constraintTop_toBottomOf="@+id/spPLInundacoes" />
 
             <TextView
                 android:id="@+id/tvBRaObs1"
@@ -251,9 +283,9 @@
                 android:text="@string/tvPLObs1Label"
                 android:textColor="#808080"
                 android:textSize="13sp"
-                app:layout_constraintEnd_toEndOf="@+id/spBraConvenio"
+                app:layout_constraintEnd_toEndOf="@+id/spPLDesmatamento"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spBraConvenio" />
+                app:layout_constraintTop_toBottomOf="@+id/spPLDesmatamento" />
 
             <android.support.v7.widget.CardView
                 android:id="@+id/cvBRaBuscar"
@@ -345,7 +377,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbBRaToolbar"
+        app:layout_constraintTop_toBottomOf="@+id/tbPLToolbar"
         app:layout_constraintVertical_bias="0.106" />
 
 </android.support.constraint.ConstraintLayout>
