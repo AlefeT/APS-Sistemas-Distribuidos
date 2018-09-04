@@ -126,37 +126,49 @@
                 android:layout_height="1dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="22dp"
+                android:layout_marginTop="18dp"
                 android:background="#9c9c9c"
                 app:layout_constraintEnd_toStartOf="@+id/tvBraOu"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvPLLocalinv" />
+                app:layout_constraintTop_toBottomOf="@+id/actvPLLocal" />
 
             <TextView
                 android:id="@+id/tvBraOu"
                 android:layout_width="wrap_content"
                 android:layout_height="26dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:text="@string/tvPLOuLabel"
                 android:textColor="#808080"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/vLogLinha1"
                 app:layout_constraintEnd_toStartOf="@+id/vLogLinha2"
-                app:layout_constraintTop_toBottomOf="@+id/tvPLLocalinv" />
+                app:layout_constraintStart_toEndOf="@+id/vLogLinha1"
+                app:layout_constraintTop_toBottomOf="@+id/actvPLLocal" />
 
             <View
                 android:id="@+id/vLogLinha2"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginEnd="22dp"
-                android:layout_marginTop="22dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="18dp"
                 android:background="#9c9c9c"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tvBraOu"
-                app:layout_constraintTop_toBottomOf="@+id/tvPLLocalinv" />
+                app:layout_constraintTop_toBottomOf="@+id/actvPLLocal" />
 
+            <View
+                android:id="@+id/vLogLinha3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:background="#409c9c9c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBraOu" />
+            
             <TextView
                 android:id="@+id/tvPLPoluicao"
                 android:layout_width="130dp"
@@ -167,7 +179,7 @@
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvBraOu" />
+                app:layout_constraintTop_toBottomOf="@+id/vLogLinha3" />
 
             <Spinner
                 android:id="@+id/spPLPoluicao"
@@ -179,19 +191,31 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/tvPLPoluicao"
-                app:layout_constraintTop_toBottomOf="@+id/tvBraOu" />
+                app:layout_constraintTop_toBottomOf="@+id/vLogLinha3" />
+
+            <View
+                android:id="@+id/vLogLinha4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:background="#409c9c9c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPLPoluicao" />
 
             <TextView
                 android:id="@+id/tvPLTransito"
                 android:layout_width="130dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:text="@string/tvPLTransitoLabel"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spPLPoluicao" />
+                app:layout_constraintTop_toBottomOf="@+id/vLogLinha4" />
 
             <Spinner
                 android:id="@+id/spPLTransito"
@@ -202,19 +226,31 @@
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvPLTransito"
-                app:layout_constraintTop_toBottomOf="@+id/spPLPoluicao" />
+                app:layout_constraintTop_toBottomOf="@+id/vLogLinha4" />
+
+            <View
+                android:id="@+id/vLogLinha5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:background="#409c9c9c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPLTransito" />
 
             <TextView
                 android:id="@+id/tvPLAlagamento"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="4dp"
                 android:text="@string/tvPLAlagamentoLabel"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spPLTransito" />
+                app:layout_constraintTop_toBottomOf="@+id/vLogLinha5" />
 
             <Spinner
                 android:id="@+id/spPLAlagamento"
@@ -222,22 +258,34 @@
                 android:layout_height="26dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvPLAlagamento"
-                app:layout_constraintTop_toBottomOf="@+id/spPLTransito" />
+                app:layout_constraintTop_toBottomOf="@+id/vLogLinha5" />
+
+            <View
+                android:id="@+id/vLogLinha6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:background="#409c9c9c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPLAlagamento" />
 
             <TextView
                 android:id="@+id/tvPLInundacoes"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="4dp"
                 android:text="@string/tvPLInundacoesLabel"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spPLAlagamento" />
+                app:layout_constraintTop_toBottomOf="@+id/vLogLinha6" />
 
             <Spinner
                 android:id="@+id/spPLInundacoes"
@@ -245,22 +293,34 @@
                 android:layout_height="26dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvPLInundacoes"
-                app:layout_constraintTop_toBottomOf="@+id/spPLAlagamento" />
+                app:layout_constraintTop_toTopOf="@+id/vLogLinha6" />
+
+            <View
+                android:id="@+id/vLogLinha7"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:background="#409c9c9c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPLInundacoes" />
 
             <TextView
                 android:id="@+id/tvPLDesmatamento"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="4dp"
                 android:text="@string/tvPLDesmatamentoLabel"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spPLInundacoes" />
+                app:layout_constraintTop_toBottomOf="@+id/vLogLinha7" />
 
             <Spinner
                 android:id="@+id/spPLDesmatamento"
@@ -268,10 +328,22 @@
                 android:layout_height="26dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvPLDesmatamento"
-                app:layout_constraintTop_toBottomOf="@+id/spPLInundacoes" />
+                app:layout_constraintTop_toBottomOf="@+id/vLogLinha7" />
+
+            <View
+                android:id="@+id/vLogLinha8"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:background="#409c9c9c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPLDesmatamento" />
 
             <TextView
                 android:id="@+id/tvBRaObs1"
@@ -279,13 +351,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/tvPLObs1Label"
                 android:textColor="#808080"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@+id/spPLDesmatamento"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spPLDesmatamento" />
+                app:layout_constraintTop_toBottomOf="@+id/vLogLinha8" />
 
             <android.support.v7.widget.CardView
                 android:id="@+id/cvBRaBuscar"
