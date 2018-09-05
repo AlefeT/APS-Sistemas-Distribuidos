@@ -117,7 +117,7 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
                     tvVDREnderecoResult.setText(jObject.getString("endereco"));
 
                     //SET Tempo de Espera
-                            tvVDRTempoesperaResult.setText(jObject.getString("tempoespera"));
+                            tvVDRTempoesperaResult.setText(jObject.getString("poluicao"));
 
                     //SET Nota Geral
                             tvVDRNotageralResult.setText(jObject.getString("notageral"));

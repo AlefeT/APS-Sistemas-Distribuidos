@@ -121,19 +121,19 @@
                 app:layout_constraintEnd_toEndOf="@+id/actvPLLocal"/>
 
             <View
-                android:id="@+id/vLogLinha1"
+                android:id="@+id/vPLLinha1"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="18dp"
                 android:background="#9c9c9c"
-                app:layout_constraintEnd_toStartOf="@+id/tvBraOu"
+                app:layout_constraintEnd_toStartOf="@+id/tvPLOu"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/actvPLLocal" />
 
             <TextView
-                android:id="@+id/tvBraOu"
+                android:id="@+id/tvPLOu"
                 android:layout_width="wrap_content"
                 android:layout_height="26dp"
                 android:layout_marginTop="4dp"
@@ -141,12 +141,12 @@
                 android:text="@string/tvPLOuLabel"
                 android:textColor="#808080"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toStartOf="@+id/vLogLinha2"
-                app:layout_constraintStart_toEndOf="@+id/vLogLinha1"
+                app:layout_constraintEnd_toStartOf="@+id/vPLLinha2"
+                app:layout_constraintStart_toEndOf="@+id/vPLLinha1"
                 app:layout_constraintTop_toBottomOf="@+id/actvPLLocal" />
 
             <View
-                android:id="@+id/vLogLinha2"
+                android:id="@+id/vPLLinha2"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginEnd="22dp"
@@ -154,11 +154,11 @@
                 android:layout_marginTop="18dp"
                 android:background="#9c9c9c"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tvBraOu"
+                app:layout_constraintStart_toEndOf="@id/tvPLOu"
                 app:layout_constraintTop_toBottomOf="@+id/actvPLLocal" />
 
             <View
-                android:id="@+id/vLogLinha3"
+                android:id="@+id/vPLLinha3"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginEnd="22dp"
@@ -167,7 +167,7 @@
                 android:background="#409c9c9c"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvBraOu" />
+                app:layout_constraintTop_toBottomOf="@+id/tvPLOu" />
 
             <TextView
                 android:id="@+id/tvPLPoluicao"
@@ -179,7 +179,7 @@
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vLogLinha3" />
+                app:layout_constraintTop_toBottomOf="@+id/vPLLinha3" />
 
             <Spinner
                 android:id="@+id/spPLPoluicao"
@@ -191,10 +191,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/tvPLPoluicao"
-                app:layout_constraintTop_toBottomOf="@+id/vLogLinha3" />
+                app:layout_constraintTop_toBottomOf="@+id/vPLLinha3" />
 
             <View
-                android:id="@+id/vLogLinha4"
+                android:id="@+id/vPLLinha4"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginEnd="22dp"
@@ -215,7 +215,7 @@
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vLogLinha4" />
+                app:layout_constraintTop_toBottomOf="@+id/vPLLinha4" />
 
             <Spinner
                 android:id="@+id/spPLTransito"
@@ -226,10 +226,10 @@
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvPLTransito"
-                app:layout_constraintTop_toBottomOf="@+id/vLogLinha4" />
+                app:layout_constraintTop_toBottomOf="@+id/vPLLinha4" />
 
             <View
-                android:id="@+id/vLogLinha5"
+                android:id="@+id/vPLLinha5"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginEnd="22dp"
@@ -250,7 +250,7 @@
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vLogLinha5" />
+                app:layout_constraintTop_toBottomOf="@+id/vPLLinha5" />
 
             <Spinner
                 android:id="@+id/spPLAlagamento"
@@ -261,10 +261,10 @@
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvPLAlagamento"
-                app:layout_constraintTop_toBottomOf="@+id/vLogLinha5" />
+                app:layout_constraintTop_toBottomOf="@+id/vPLLinha5" />
 
             <View
-                android:id="@+id/vLogLinha6"
+                android:id="@+id/vPLLinha6"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginEnd="22dp"
@@ -285,7 +285,7 @@
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vLogLinha6" />
+                app:layout_constraintTop_toBottomOf="@+id/vPLLinha6" />
 
             <Spinner
                 android:id="@+id/spPLInundacoes"
@@ -296,10 +296,10 @@
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvPLInundacoes"
-                app:layout_constraintTop_toTopOf="@+id/vLogLinha6" />
+                app:layout_constraintTop_toTopOf="@+id/vPLLinha6" />
 
             <View
-                android:id="@+id/vLogLinha7"
+                android:id="@+id/vPLLinha7"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginEnd="22dp"
@@ -320,7 +320,7 @@
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vLogLinha7" />
+                app:layout_constraintTop_toBottomOf="@+id/vPLLinha7" />
 
             <Spinner
                 android:id="@+id/spPLDesmatamento"
@@ -331,10 +331,10 @@
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvPLDesmatamento"
-                app:layout_constraintTop_toBottomOf="@+id/vLogLinha7" />
+                app:layout_constraintTop_toBottomOf="@+id/vPLLinha7" />
 
             <View
-                android:id="@+id/vLogLinha8"
+                android:id="@+id/vPLLinha8"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginEnd="22dp"
@@ -346,7 +346,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvPLDesmatamento" />
 
             <TextView
-                android:id="@+id/tvBRaObs1"
+                android:id="@+id/tvPLObs1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
@@ -357,10 +357,10 @@
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@+id/spPLDesmatamento"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vLogLinha8" />
+                app:layout_constraintTop_toBottomOf="@+id/vPLLinha8" />
 
             <android.support.v7.widget.CardView
-                android:id="@+id/cvBRaBuscar"
+                android:id="@+id/cvPLPesquisar"
                 android:layout_width="0dp"
                 android:layout_height="46dp"
                 android:layout_marginEnd="16dp"
@@ -371,14 +371,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvBRaObs1">
+                app:layout_constraintTop_toBottomOf="@+id/tvPLObs1">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/ivBRaBuscar"
+                        android:id="@+id/ivPLPesquisar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -392,7 +392,7 @@
                         android:contentDescription="@string/ivGeralAPSDesc" />
 
                     <TextView
-                        android:id="@+id/tvBRaBuscar"
+                        android:id="@+id/tvPLPesquisar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
@@ -418,11 +418,11 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cvBRaBuscar"
+                app:layout_constraintTop_toBottomOf="@+id/cvPLPesquisar"
                 app:layout_constraintVertical_bias="0.161" />
 
             <View
-                android:id="@+id/vBAvFim"
+                android:id="@+id/vPLFim"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginEnd="10dp"
@@ -430,7 +430,7 @@
                 android:layout_marginTop="26dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cvBRaBuscar" />
+                app:layout_constraintTop_toBottomOf="@+id/cvPLPesquisar" />
 
         </android.support.constraint.ConstraintLayout>
     </ScrollView>

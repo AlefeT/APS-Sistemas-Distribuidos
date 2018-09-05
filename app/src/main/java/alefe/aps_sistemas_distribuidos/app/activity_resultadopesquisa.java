@@ -58,7 +58,7 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
         rbCarregando                          =    findViewById(R.id.rbCarregando);
 
         rbCarregando.setVisibility(View.VISIBLE);
-        tvReBRNenhumencontrado.setText("Aguarde um momento, estamos buscando os hospitais em nossa base.");
+        tvReBRNenhumencontrado.setText("Aguarde um momento, estamos buscando os locais em nossa base.");
         tvReBRNenhumencontrado.setVisibility(View.VISIBLE);
 
 
@@ -133,7 +133,7 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
 
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="https://dkvox.ngrok.io/qservices/busca.php?token=&nomehospital="+hospitalF+"&convenio="+convenioF+"&distancia="+distanciaF+"&tempoespera="+tempoesperaF+"&especialidade="+especialidadeF+"&notageral="+notageralF+"&estacionamento="+estacionamentoF+"&recepcao="+recepcaoF+"&organizacao="+organizacaoF+"&sinalizacao="+sinalizacaoF+"&cordialidade="+cordialidadeF+"&limpeza="+limpezaF+"&triagem="+triagemF+"&medico="+medicoF+"&enfermaria="+enfermariaF+"&exames="+examesF+"&internacao="+internacaoF+"&posicao="+posicaoF;
+        String url ="https://dkvox.ngrok.io/qservices/busca.php?token=&nomehospital="+hospitalF+"&convenio="+convenioF+"&distancia="+distanciaF+"&poluicao="+tempoesperaF+"&especialidade="+especialidadeF+"&notageral="+notageralF+"&estacionamento="+estacionamentoF+"&recepcao="+recepcaoF+"&organizacao="+organizacaoF+"&sinalizacao="+sinalizacaoF+"&cordialidade="+cordialidadeF+"&limpeza="+limpezaF+"&triagem="+triagemF+"&medico="+medicoF+"&enfermaria="+enfermariaF+"&exames="+examesF+"&internacao="+internacaoF+"&posicao="+posicaoF;
         //Log.d("TAG","URL de Busca: " + url);
 
         // Request a string response from the provided URL.
