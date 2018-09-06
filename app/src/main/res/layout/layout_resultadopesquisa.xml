@@ -7,7 +7,7 @@
     tools:context="alefe.aps_sistemas_distribuidos.app.activity_resultadopesquisa">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/tbReBRToolbar"
+        android:id="@+id/tbRPToolbar"
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:background="@color/colorPrimary"
@@ -15,7 +15,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         <ImageView
-            android:id="@+id/ivReBRArrowback"
+            android:id="@+id/ivRPArrowback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -33,7 +33,7 @@
             app:srcCompat="@drawable/ic_arrowbackwhite" />
 
         <TextView
-            android:id="@+id/tvReBRTitulo"
+            android:id="@+id/tvRPTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -51,7 +51,7 @@
             tools:layout_editor_absoluteY="65dp" />
 
         <ImageView
-            android:id="@+id/ivReBRHome"
+            android:id="@+id/ivRPHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
@@ -71,30 +71,30 @@
     </android.support.v7.widget.Toolbar>
 
     <TextView
-        android:id="@+id/tvReBRTitulo1"
+        android:id="@+id/tvRPTitulo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
-        android:text=""
+        android:text="@string/tvTitulo1Label"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbReBRToolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/tbRPToolbar" />
 
     <ScrollView
-        android:id="@+id/svReBRTela"
+        android:id="@+id/svRPTela"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvReBRTitulo1"
+        app:layout_constraintTop_toBottomOf="@id/tvRPTitulo1"
         app:layout_constraintVertical_bias="0.0">
 
         <android.support.constraint.ConstraintLayout
@@ -106,7 +106,7 @@
             android:layout_marginTop="8dp">
 
             <TableLayout
-                android:id="@+id/tlReBRLista"
+                android:id="@+id/tlRPLista"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
@@ -133,11 +133,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbReBRToolbar"
+        app:layout_constraintTop_toBottomOf="@+id/tbRPToolbar"
         app:layout_constraintVertical_bias="0.854" />
 
     <TextView
-        android:id="@+id/tvReBRNenhumencontrado"
+        android:id="@+id/tvRPNenhumencontrado"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
@@ -155,7 +155,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbReBRToolbar"
+        app:layout_constraintTop_toBottomOf="@+id/tbRPToolbar"
         app:layout_constraintVertical_bias="0.397" />
 
 </android.support.constraint.ConstraintLayout>

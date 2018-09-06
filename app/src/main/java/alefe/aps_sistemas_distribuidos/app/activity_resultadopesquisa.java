@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -28,7 +29,8 @@ import org.json.JSONObject;
 public class activity_resultadopesquisa extends AppCompatActivity implements View.OnClickListener
 {
     ProgressBar rbCarregando;
-    String posicaoF, hospitalF, convenioF, distanciaF, tempoesperaF, especialidadeF, notageralF, estacionamentoF, recepcaoF, organizacaoF, sinalizacaoF, cordialidadeF, limpezaF, triagemF, medicoF, enfermariaF, examesF, internacaoF, tituloDaActivity;
+    String locais[];
+    String localF, poluicaoF, transitoF, alagamentoF, inundacaoF, desmatamentoF;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -47,63 +49,39 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
         //////////////////////////////////
 
         //  ImageView's //
-        ImageView ivReBRArrowback             =    findViewById(R.id.ivReBRArrowback);
-        ImageView ivReBRHome                  =    findViewById(R.id.ivReBRHome);
+        ImageView ivRPArrowback             =    findViewById(R.id.ivRPArrowback);
+        ImageView ivRPHome                  =    findViewById(R.id.ivRPHome);
 
         //  TextView's //
-        TextView tvReBRTitulo1                =    findViewById(R.id.tvReBRTitulo1);
-        final TextView tvReBRNenhumencontrado =    findViewById(R.id.tvReBRNenhumencontrado);
+        final TextView tvRPNenhumencontrado =    findViewById(R.id.tvRPNenhumencontrado);
 
         //  ProgressBar's   //
-        rbCarregando                          =    findViewById(R.id.rbCarregando);
+        rbCarregando                        =    findViewById(R.id.rbCarregando);
 
         rbCarregando.setVisibility(View.VISIBLE);
-        tvReBRNenhumencontrado.setText("Aguarde um momento, estamos buscando os locais em nossa base.");
-        tvReBRNenhumencontrado.setVisibility(View.VISIBLE);
+        tvRPNenhumencontrado.setText("Aguarde um momento, estamos buscando os locais em nossa base.");
+        tvRPNenhumencontrado.setVisibility(View.VISIBLE);
 
 
 
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //  ESSAS VARIÁVEIS ABAIXO QUE DEVERÃO SER UTILIZADAS NA QUERY.                                                                                       //
-        //  SE O USUARIO NÃO PREENCHER O HOSPITAL, ELE VIRÁ COMO "" (VAZIO)                                                                                   //
-        //  SE O USUARIO NÃO PREENCHER CONVENIO/DISTANCIA/TEMPO/ESPECIALIDADE, ELES VIRÃO COMO "Selecione" (PADRÃO)                                           //
-        //  SE O USUARIO NÃO PREENCHER QUALQUER CAMPO REFERENTE A NOTA (EX.: NOTAGERAL/ESTACIONAMENTO/RECEPCAO, ELES VIRÃO COMO "Selecione a Nota" (PADRÃO)   //
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //  ESSAS VARIÁVEIS ABAIXO QUE DEVERÃO SER UTILIZADAS NA QUERY.                                                               //
+        //  SE O USUARIO NÃO PREENCHER O HOSPITAL, ELE VIRÁ COMO "" (VAZIO)                                                           //
+        //  SE O USUARIO NÃO PREENCHER UM DOS FILTROS, ELES VIRÃO COMO "Selecione" (PADRÃO)                                           //
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //BUNDLE GET STRINGS DO PUT EXTRA
-        Bundle bundle       = getIntent().getExtras();
+        Bundle bundle   = getIntent().getExtras();
 
-        //Busca Rapida
-        hospitalF           = bundle.getString("hospitalF").replaceAll("[ ]", "%20");
-        convenioF           = bundle.getString("convenioF");
-        distanciaF          = bundle.getString("distanciaF").replace("Até%205km","5").replace("Até%2010km","10").replace("Até%2020km","20").replace("Mais%20de%2020km","21");
-        tempoesperaF        = bundle.getString("tempoesperaF").replace("Até%2030min","9.0").replace("Até%201%20hora%20e%2030min","5.0").replace("Até%201%20hora","7.0").replace("Mais%20de%201%20hora%20e%2030min","0");
-        posicaoF            = bundle.getString("posicaoF");
-        tituloDaActivity    = bundle.getString("tituloDaActivity");
-
-        if(tituloDaActivity.equals("Busca Avançada"))
-        {
-            //Busca Avancada
-            especialidadeF = bundle.getString("especialidadeF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-            notageralF = bundle.getString("notageralF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-            estacionamentoF = bundle.getString("estacionamentoF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-            recepcaoF = bundle.getString("recepcaoF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-            organizacaoF = bundle.getString("organizacaoF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-            sinalizacaoF = bundle.getString("sinalizacaoF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-            cordialidadeF = bundle.getString("cordialidadeF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-            limpezaF = bundle.getString("limpezaF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-            triagemF = bundle.getString("triagemF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-            medicoF = bundle.getString("medicoF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-            enfermariaF = bundle.getString("enfermariaF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-            examesF = bundle.getString("examesF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-            internacaoF = bundle.getString("internacaoF").replace("Menor%20que%202,5", "0").replace("Entre%202,5%20e%205,0", "2.5").replace("Entre%205,1%20e%207,5", "5.0").replace("Maior%20que%207,5", "7.5");
-        }
+        localF          = bundle.getString("localF");
+        poluicaoF       = bundle.getString("poluicaoF");
+        transitoF       = bundle.getString("transitoF");
+        alagamentoF     = bundle.getString("alagamentoF");
+        inundacaoF      = bundle.getString("inundacaoF");
+        desmatamentoF   = bundle.getString("desmatamentoF");
 
         //LOG pra verificar valores do bundle
-        //Log.d("tag", "tituloDaActivity: " + tituloDaActivity + ", posicaoF: " + posicaoF + ", hospitalF: " + hospitalF + ", convenioF: " + convenioF + ", distanciaF: " + distanciaF + ", tempoesperaF: " + tempoesperaF + ", especialidadeF: " + especialidadeF + ", notageralF: " + notageralF + ", estacionamentoF: " + estacionamentoF + ", recepcaoF: " + recepcaoF + ", organizacaoF: " + organizacaoF + ", sinalizacaoF: " + sinalizacaoF + ", cordialidadeF: " + cordialidadeF + ", limpezaF: " + limpezaF + ", triagemF: " + triagemF + ", medicoF: " + medicoF + ", enfermariaF: " + enfermariaF + ", examesF: " + examesF + ", internacaoF: " + internacaoF);
-
-        //Seta o titulo da pagina (Busca Rapida ou Busca Avançada)
-        tvReBRTitulo1.setText(tituloDaActivity);
+        //Log.d("tag", ", localF: " + localF + ", poluicaoF: " + poluicaoF + ", transitoF: " + transitoF + ", alagamentoF: " + alagamentoF + ", inundacaoF: " + inundacaoF + ", desmatamentoF: " + desmatamentoF);
 
 
 
@@ -111,13 +89,13 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
         //  Set's dos Click Listeners   //
         //////////////////////////////////
 
-        ivReBRArrowback.setOnClickListener((View.OnClickListener) this);
-        ivReBRHome.setOnClickListener((View.OnClickListener) this);
+        ivRPArrowback.setOnClickListener((View.OnClickListener) this);
+        ivRPHome.setOnClickListener((View.OnClickListener) this);
 
 
 
         //////////////////////////////////
-        //  Mostrar Hospitais Resultado //
+        //  Mostrar Locais Resultado    //
         //////////////////////////////////
 
         //Pega tamanho da tela
@@ -131,68 +109,61 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
         //  CONEXÃO VOLLEY COMEÇA AQUI  //
         //////////////////////////////////
 
+        //CONEXÃO VOLLEY COMEÇA AQUI
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="https://dkvox.ngrok.io/qservices/busca.php?token=&nomehospital="+hospitalF+"&convenio="+convenioF+"&distancia="+distanciaF+"&poluicao="+tempoesperaF+"&especialidade="+especialidadeF+"&notageral="+notageralF+"&estacionamento="+estacionamentoF+"&recepcao="+recepcaoF+"&organizacao="+organizacaoF+"&sinalizacao="+sinalizacaoF+"&cordialidade="+cordialidadeF+"&limpeza="+limpezaF+"&triagem="+triagemF+"&medico="+medicoF+"&enfermaria="+enfermariaF+"&exames="+examesF+"&internacao="+internacaoF+"&posicao="+posicaoF;
-        //Log.d("TAG","URL de Busca: " + url);
 
-        // Request a string response from the provided URL.
+        //Link pra puxar a STRING com todos os locais.
+        String url ="https://dkvox.com.br/AMBIENTETESTE/SD/buscaresultado.php?local="+localF+"&poluicao="+poluicaoF+"&transito="+transitoF+"&alagamento="+alagamentoF+"&inundacoes="+inundacaoF+"&desmatamento="+desmatamentoF;
+
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>()
         {
             @Override
             public void onResponse(String response)
             {
+                //Depois de tratar, quebrar a STRING em vários campos e armazenar cada um num campo do ARRAY DE STRINGS:
+                locais = response.split(",");
+
                 try
                 {
                     JSONObject jObject = new JSONObject(response);
                     //Log.d("TAG","" + jObject);
 
                     //  TableLayout's //
-                    TableLayout tlReBRLista = findViewById(R.id.tlReBRLista);
+                    TableLayout tlRPLista = findViewById(R.id.tlRPLista);
 
                     rbCarregando.setVisibility(View.GONE);
-                    tvReBRNenhumencontrado.setVisibility(View.GONE);
+                    tvRPNenhumencontrado.setVisibility(View.GONE);
 
-                    // Getting hospitallist status//
-                    String status = jObject.getString("status");
-
-                    if (status.equals("Nenhum hospital encontrado."))
-                    {
-                        tvReBRNenhumencontrado.setText("Nenhum hospital encontrado.");
-                        tvReBRNenhumencontrado.setVisibility(View.VISIBLE);
-                    }
-
-                    //Faz um loop pra cada resultado retornado do BD (hospnum)
-                    int hospnum = jObject.length();
-                    //Log.d("TAG", "Hospitais encontrados: " + String.valueOf(hospnum-1));
-                    for (int i = 0; i < hospnum; i++)
+                    //Faz um loop pra cada resultado retornado do PHP (localnum)
+                    int localpnum = jObject.length();
+                    //Log.d("TAG", "Locais encontrados: " + String.valueOf(localnum-1));
+                    for (int i = 0; i < localpnum; i++)
                     {
 
-                        String hospatual = "hospital"+(i+1);
+                        String localatual = "local"+(i+1);
                         //Adicionando um novo row a table layout @VINICIUS
                         TableRow row = new TableRow(activity_resultadopesquisa.this);
                         TableRow.LayoutParams p1 = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
                         row.setLayoutParams(p1);
                         TextView qty = new TextView(activity_resultadopesquisa.this);
-                        qty.setText(jObject.getJSONObject(hospatual).getString("nome"));
+                        qty.setText(jObject.getJSONObject(localatual).getString("nome"));
                         qty.setTextColor(Color.parseColor("#000000"));
                         qty.setPadding(8, 4, 8, 3);
                         qty.setTextSize(15);
                         qty.setMaxWidth(screenWidth - 440);
                         qty.setMaxLines(3);
-                        final String hospitalF2 = qty.getText().toString();
-                        final String distanciaF2 = jObject.getJSONObject(hospatual).getString("distancia");
+                        final String localF2 = qty.getText().toString();
                         Button qty2 = (Button) getLayoutInflater().inflate(R.layout.button_style, null);
                         qty2.setOnClickListener(new View.OnClickListener()
                         {
                             public void onClick(View v)
                             {
                                 //  Log de onClick //
-                                //Log.d("tag", "onClick no VerDetalhes do Hospital: " + hospitalF2);
-                                Intent intentReBRVerdetalhes = new Intent(activity_resultadopesquisa.this, activity_verdetalhes.class);
-                                intentReBRVerdetalhes.putExtra("hospitalF2", hospitalF2);
-                                intentReBRVerdetalhes.putExtra("distanciaF2", distanciaF2);
-                                startActivity(intentReBRVerdetalhes);
+                                //Log.d("tag", "onClick no VerDetalhes do Local: " + localF2);
+                                Intent intentRPVerdetalhes = new Intent(activity_resultadopesquisa.this, activity_verdetalhes.class);
+                                intentRPVerdetalhes.putExtra("localF2", localF2);
+                                startActivity(intentRPVerdetalhes);
                             }
                         });
                         qty2.setPadding(2, 3, 10, 3);
@@ -201,7 +172,7 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
                         qty2.setTextSize(12);
                         row.addView(qty);
                         row.addView(qty2);
-                        tlReBRLista.addView(row, i);
+                        tlRPLista.addView(row, i);
                     }
                     //Log.d("tag","começo do loop extra");
                     //row vazia só pra última gerada não ficar grudada no fim da tela
@@ -221,7 +192,7 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
                     qty2.setTextSize(11);
                     row.addView(qty);
                     row.addView(qty2);
-                    tlReBRLista.addView(row, hospnum);
+                    tlRPLista.addView(row, localpnum);
                     //Log.d("tag","final do loop extra");
                 }
                 catch (JSONException e)
@@ -238,15 +209,15 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
                 //Display an error if the connection failed
                 //Log.e("TAG","Volley connection miserably failed.");
                 Toast.makeText(activity_resultadopesquisa.this, "Erro ao se conectar com o servidor.\nPor favor verifique sua conexão ou tente novamente mais tarde.", Toast.LENGTH_LONG).show();
-                tvReBRNenhumencontrado.setText("Erro ao se conectar com o servidor.\nPor favor verifique sua conexão ou tente novamente em alguns instantes.");
-                tvReBRNenhumencontrado.setVisibility(View.VISIBLE);
+                tvRPNenhumencontrado.setText("Erro ao se conectar com o servidor.\nPor favor verifique sua conexão ou tente novamente em alguns instantes.");
+                tvRPNenhumencontrado.setVisibility(View.VISIBLE);
             }
         });
 
-        stringRequest.setRetryPolicy(new DefaultRetryPolicy(60 * 1000, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
+
+        //stringRequest.setRetryPolicy(new DefaultRetryPolicy(60 * 1000, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
     }
 
@@ -311,7 +282,7 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
     {
         switch (view.getId())
         {
-            case R.id.ivReBRArrowback :
+            case R.id.ivRPArrowback:
                 //  Log de onClick  //
                 //Log.d("tag","onClick no ArrowLeft");
 
@@ -320,7 +291,7 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
 
 
 
-            case R.id.ivReBRHome :
+            case R.id.ivRPHome:
                 //  Log de onClick  //
                 //Log.d("tag","onClick no Home");
 

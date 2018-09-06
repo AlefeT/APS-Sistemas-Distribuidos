@@ -18,11 +18,12 @@
     <string name="tvPLObs1Label">Nota: Todos os campos são opcionais, no entanto, é necessário preencher ao menos um.</string>
     <string name="btPLPesquisarLabel">Pesquisar</string>
     <string name="strNadaSelecionado">Nenhum filtro foi especificado.\n\Por favor preencha ao menos um filtro.</string>
-    <string name="strLocalEspecifico">Devido a um local específico ter sido selecionado, os demais filtros serão ignorados.</string>
+    <string name="strLocalEspecifico">Devido a um Local específico ter sido selecionado, os demais filtros serão ignorados.</string>
     <string name="strLocalInvalido">Local inválido.</string>
 
 
     <!-- Resultado Pesquisa -->
+    <string name="tvTitulo1Label">Resultado da Pesquisa:</string>
     <string name="tvNenhumencontradoLabel">Nenhum local encontrado.</string>
 
 

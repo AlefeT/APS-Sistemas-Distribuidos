@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -32,10 +33,10 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
     Spinner spPLPoluicao, spPLTransito, spPLAlagamento, spPLInundacoes, spPLDesmatamento;
     String locais[], selectedPoluicaoText, selectedTransitoText, selectedAlagamentoText, selectedInundacoesText, selectedDesmatamentoText;
     String[] poluicao       = new String[]{"Selecione", "Baixa", "Media", "Alta"};
-    String[] transito       = new String[]{"Selecione", "Livre", "Médio", "Intenso"};
-    String[] alagamento     = new String[]{"Selecione", "Nenhum Risco", "Baixo Risco", "Médio Risco", "Alto Risco"};
-    String[] inundacoes     = new String[]{"Selecione", "Nenhum Risco", "Baixo Risco", "Médio Risco", "Alto Risco"};
-    String[] desmatamento   = new String[]{"Selecione", "Zero", "Baixo", "Médio", "Alto"};
+    String[] transito       = new String[]{"Selecione", "Livre", "Medio", "Intenso"};
+    String[] alagamento     = new String[]{"Selecione", "Nenhum Risco", "Baixo Risco", "Medio Risco", "Alto Risco"};
+    String[] inundacoes     = new String[]{"Selecione", "Nenhum Risco", "Baixo Risco", "Medio Risco", "Alto Risco"};
+    String[] desmatamento   = new String[]{"Selecione", "Zero", "Baixo", "Medio", "Alto"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -104,23 +105,6 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
             @Override
             public void onResponse(String response)
             {
-                //Tratar essa STRING ainda inteira dando replaces para tirar as aspas e substituir os códigos “u00...” pelas letras com acento:
-                response = response.replace("\"","")
-                        .replace("\\u00e3","ã")
-                        .replace("\\u00f5","õ")
-                        .replace("\\u00f1","ñ")
-                        .replace("\\u00e1","á")
-                        .replace("\\u00e9","é")
-                        .replace("\\u00ed","í")
-                        .replace("\\u00f3","ó")
-                        .replace("\\u00fa","ú")
-                        .replace("\\u00e2","â")
-                        .replace("\\u00ea","ê")
-                        .replace("\\u00ee","î")
-                        .replace("\\u00f4","ô")
-                        .replace("\\u00fb","û")
-                        .replace("\\u00e7","ç");
-
                 //Depois de tratar, quebrar a STRING em vários campos e armazenar cada um num campo do ARRAY DE STRINGS:
                 locais = response.split(",");
 
@@ -240,7 +224,7 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
         });
 
         //  Desmatamento    //
-        ArrayAdapter<String> adapterDesmatamento = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, poluicao);
+        ArrayAdapter<String> adapterDesmatamento = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, desmatamento);
         adapterDesmatamento.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spPLDesmatamento.setAdapter(adapterDesmatamento);
         spPLDesmatamento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
@@ -385,12 +369,20 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
 
                     //LOG pra verificar valores finais
                     /*Log.d("tag", ", localF: " + localF
-                            + ", poluicaoF: " + poluicaoF);*/
+                            + ", poluicaoF: " + poluicaoF
+                            + ", transitoF: " + transitoF
+                            + ", alagamentoF: " + alagamentoF
+                            + ", inundacaoF: " + inundacaoF
+                            + ", desmatamentoF: " + desmatamentoF);*/
 
 
                     //SE NÃO TIVER NENHUM FILTRO ESPECIFICADO, AVISAR E NÃO BUSCAR:
                     if (localF.length() <= 3
-                            && poluicaoF.equals("Selecione"))
+                            && poluicaoF.equals("Selecione")
+                            && transitoF.equals("Selecione")
+                            && alagamentoF.equals("Selecione")
+                            && inundacaoF.equals("Selecione")
+                            && desmatamentoF.equals("Selecione"))
                     {
                         Toast.makeText(activity_pesquisarlocais.this, R.string.strNadaSelecionado, Toast.LENGTH_SHORT).show();
                         actvPLLocal.requestFocus();
@@ -399,7 +391,11 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
                     {
                         //SE LOCAL FOI ESPECIFICADO, e tiver mais filtros especificados além do local, avisar ao cliente que esses filtros extras serão ignorados.
                         if (localF.length() > 3
-                                || !poluicaoF.equals("Selecione"))
+                                && (!poluicaoF.equals("Selecione")
+                                    || !transitoF.equals("Selecione")
+                                    || !alagamentoF.equals("Selecione")
+                                    || !inundacaoF.equals("Selecione")
+                                    || !desmatamentoF.equals("Selecione")))
                         {
                             Toast.makeText(activity_pesquisarlocais.this, R.string.strLocalEspecifico, Toast.LENGTH_SHORT).show();
                         }
@@ -407,7 +403,10 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
                         Intent intentPLPesquisar = new Intent(activity_pesquisarlocais.this, activity_resultadopesquisa.class);
                         intentPLPesquisar.putExtra("localF", localF);
                         intentPLPesquisar.putExtra("poluicaoF", poluicaoF);
-                        intentPLPesquisar.putExtra("tituloDaActivity", "Pesquisar Locais");
+                        intentPLPesquisar.putExtra("transitoF", transitoF);
+                        intentPLPesquisar.putExtra("alagamentoF", alagamentoF);
+                        intentPLPesquisar.putExtra("inundacaoF", inundacaoF);
+                        intentPLPesquisar.putExtra("desmatamentoF", desmatamentoF);
                         startActivity(intentPLPesquisar);
                     }
                 break;
