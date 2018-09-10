@@ -15,16 +15,12 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class activity_resultadopesquisa extends AppCompatActivity implements View.OnClickListener
 {
@@ -66,7 +62,7 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //  ESSAS VARIÁVEIS ABAIXO QUE DEVERÃO SER UTILIZADAS NA QUERY.                                                               //
-        //  SE O USUARIO NÃO PREENCHER O HOSPITAL, ELE VIRÁ COMO "" (VAZIO)                                                           //
+        //  SE O USUARIO NÃO PREENCHER O LOCAL, ELE VIRÁ COMO "" (VAZIO)                                                           //
         //  SE O USUARIO NÃO PREENCHER UM DOS FILTROS, ELES VIRÃO COMO "Selecione" (PADRÃO)                                           //
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -121,13 +117,14 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
             @Override
             public void onResponse(String response)
             {
+
                 //Depois de tratar, quebrar a STRING em vários campos e armazenar cada um num campo do ARRAY DE STRINGS:
                 locais = response.split(",");
 
                 try
                 {
-                    JSONObject jObject = new JSONObject(response);
-                    //Log.d("TAG","" + jObject);
+                    String respostaj = response;
+                    //Log.d("TAG","" + respostaj);
 
                     //  TableLayout's //
                     TableLayout tlRPLista = findViewById(R.id.tlRPLista);
@@ -136,24 +133,22 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
                     tvRPNenhumencontrado.setVisibility(View.GONE);
 
                     //Faz um loop pra cada resultado retornado do PHP (localnum)
-                    int localpnum = jObject.length();
-                    //Log.d("TAG", "Locais encontrados: " + String.valueOf(localnum-1));
+                    int localpnum = respostaj.length();
+                    //Log.d("TAG", "Locais encontrados: " + String.valueOf(localpnum-1));
                     for (int i = 0; i < localpnum; i++)
                     {
-
-                        String localatual = "local"+(i+1);
-                        //Adicionando um novo row a table layout @VINICIUS
+                        //Adicionando um novo row a table layout
                         TableRow row = new TableRow(activity_resultadopesquisa.this);
                         TableRow.LayoutParams p1 = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
                         row.setLayoutParams(p1);
                         TextView qty = new TextView(activity_resultadopesquisa.this);
-                        qty.setText(jObject.getJSONObject(localatual).getString("nome"));
+                        qty.setText(locais[i]);
                         qty.setTextColor(Color.parseColor("#000000"));
                         qty.setPadding(8, 4, 8, 3);
                         qty.setTextSize(15);
                         qty.setMaxWidth(screenWidth - 440);
                         qty.setMaxLines(3);
-                        final String localF2 = qty.getText().toString();
+                        final String localF2 = locais[i];
                         Button qty2 = (Button) getLayoutInflater().inflate(R.layout.button_style, null);
                         qty2.setOnClickListener(new View.OnClickListener()
                         {
@@ -195,7 +190,7 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
                     tlRPLista.addView(row, localpnum);
                     //Log.d("tag","final do loop extra");
                 }
-                catch (JSONException e)
+                catch (Exception e)
                 {
                     e.printStackTrace();
                 }
@@ -207,7 +202,7 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
             public void onErrorResponse(VolleyError error)
             {
                 //Display an error if the connection failed
-                //Log.e("TAG","Volley connection miserably failed.");
+                Log.e("TAG","Volley connection miserably failed.");
                 Toast.makeText(activity_resultadopesquisa.this, "Erro ao se conectar com o servidor.\nPor favor verifique sua conexão ou tente novamente mais tarde.", Toast.LENGTH_LONG).show();
                 tvRPNenhumencontrado.setText("Erro ao se conectar com o servidor.\nPor favor verifique sua conexão ou tente novamente em alguns instantes.");
                 tvRPNenhumencontrado.setVisibility(View.VISIBLE);
@@ -216,8 +211,6 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
 
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
-
-        //stringRequest.setRetryPolicy(new DefaultRetryPolicy(60 * 1000, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
     }
 

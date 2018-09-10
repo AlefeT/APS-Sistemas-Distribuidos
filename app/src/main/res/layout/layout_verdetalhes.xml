@@ -71,7 +71,7 @@
 </android.support.v7.widget.Toolbar>
 
     <TextView
-        android:id="@+id/tvVDRNome"
+        android:id="@+id/tvVDNome"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -83,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tbVDRToolbar" />
 
     <TextView
-        android:id="@+id/tvVDREndereco"
+        android:id="@+id/tvVDPoluicao"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -92,10 +92,10 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvVDRNomeResult" />
+        app:layout_constraintTop_toBottomOf="@+id/tvVDNome" />
 
     <TextView
-        android:id="@+id/tvVDRTempoespera"
+        android:id="@+id/tvVDTransito"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -104,10 +104,10 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvVDREnderecoResult" />
+        app:layout_constraintTop_toBottomOf="@+id/tvVDPoluicao" />
 
     <TextView
-        android:id="@+id/tvVDRDistancia"
+        android:id="@+id/tvVDAlagamento"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -116,24 +116,36 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvVDRTempoesperaResult" />
-
+        app:layout_constraintTop_toBottomOf="@+id/tvVDTransito" />
 
     <TextView
-        android:id="@+id/tvVDRNotageral"
+        android:id="@+id/tvVDInundacoes"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:text="@string/tvVDInundacoesLabel"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVDAlagamento" />
+
+
+    <TextView
+        android:id="@+id/tvVDDesmatamento"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
         android:text="@string/tvVDDesmatamentoLabel"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvVDRDistanciaResult" />
+        app:layout_constraintTop_toBottomOf="@+id/tvVDInundacoes" />
 
 
     <TextView
-        android:id="@+id/tvVDRNomeResult"
+        android:id="@+id/tvVDNomeR"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -143,11 +155,11 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvVDRNome"
+        app:layout_constraintStart_toEndOf="@+id/tvVDNome"
         app:layout_constraintTop_toBottomOf="@+id/tbVDRToolbar" />
 
     <TextView
-        android:id="@+id/tvVDREnderecoResult"
+        android:id="@+id/tvVDPoluicaoR"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -157,50 +169,64 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvVDREndereco"
-        app:layout_constraintTop_toBottomOf="@+id/tvVDRNomeResult" />
+        app:layout_constraintStart_toEndOf="@+id/tvVDPoluicao"
+        app:layout_constraintTop_toBottomOf="@+id/tvVDNome" />
 
     <TextView
-        android:id="@+id/tvVDRTempoesperaResult"
+        android:id="@+id/tvVDTransitoR"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text=""
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvVDRTempoespera"
-        app:layout_constraintTop_toBottomOf="@+id/tvVDREnderecoResult" />
+        app:layout_constraintStart_toEndOf="@+id/tvVDTransito"
+        app:layout_constraintTop_toBottomOf="@+id/tvVDPoluicao" />
 
     <TextView
-        android:id="@+id/tvVDRDistanciaResult"
+        android:id="@+id/tvVDAlagamentoR"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text=""
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvVDRDistancia"
-        app:layout_constraintTop_toBottomOf="@+id/tvVDRTempoesperaResult" />
+        app:layout_constraintStart_toEndOf="@+id/tvVDAlagamento"
+        app:layout_constraintTop_toBottomOf="@+id/tvVDTransito" />
 
     <TextView
-        android:id="@+id/tvVDRNotageralResult"
+        android:id="@+id/tvVDInundacoesR"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text=""
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvVDRNotageral"
-        app:layout_constraintTop_toBottomOf="@+id/tvVDRDistanciaResult" />
+        app:layout_constraintStart_toEndOf="@+id/tvVDInundacoes"
+        app:layout_constraintTop_toBottomOf="@+id/tvVDAlagamento" />
+
+    <TextView
+        android:id="@+id/tvVDDesmatamentoR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvVDDesmatamento"
+        app:layout_constraintTop_toBottomOf="@+id/tvVDInundacoes" />
 
     <TextView
         android:id="@+id/tvVDRSelecione"
@@ -208,13 +234,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="16dp"
         android:text="@string/tvVDSelecioneLabel"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvVDRNotageralResult" />
+        app:layout_constraintTop_toBottomOf="@+id/tvVDDesmatamento" />
 
     <ImageView
         android:id="@+id/ivMaps"

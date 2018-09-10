@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -21,16 +20,14 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
-import org.json.JSONObject;
-
-import alefe.aps_sistemas_distribuidos.app.R;
 
 public class activity_verdetalhes extends AppCompatActivity implements View.OnClickListener
 {
     ProgressBar vdCarregando;
-    String hospitalF2;
+    String localF2;
+    String dados[];
     Uri gmapsIntentUri, wazeIntentUri;
-    TextView tvVDREnderecoResult, tvVDRTempoesperaResult, tvVDRDistanciaResult, tvVDRNotageralResult;
+    TextView tvVDPoluicao, tvVDTransito, tvVDAlagamento, tvVDInundacoes, tvVDDesmatamento;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -55,10 +52,12 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
         ImageView ivWaze                    =    findViewById(R.id.ivWaze);
 
         //  TextView's //
-        TextView tvVDRNomeResult            =    findViewById(R.id.tvVDRNomeResult);
-        tvVDREnderecoResult                 =    findViewById(R.id.tvVDREnderecoResult);
-        tvVDRTempoesperaResult              =    findViewById(R.id.tvVDRTempoesperaResult);
-        tvVDRNotageralResult                =    findViewById(R.id.tvVDRNotageralResult);
+        TextView tvVDRNomeResult            =    findViewById(R.id.tvVDNomeR);
+        tvVDPoluicao                        =    findViewById(R.id.tvVDPoluicaoR);
+        tvVDTransito                        =    findViewById(R.id.tvVDTransitoR);
+        tvVDAlagamento                      =    findViewById(R.id.tvVDAlagamentoR);
+        tvVDInundacoes                      =    findViewById(R.id.tvVDInundacoesR);
+        tvVDDesmatamento                    =    findViewById(R.id.tvVDDesmatamentoR);
         TextView tvMaps                     =    findViewById(R.id.tvMaps);
         TextView tvWaze                     =    findViewById(R.id.tvWaze);
 
@@ -87,10 +86,11 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
         //////////////////////////////////
 
         Bundle bundle = getIntent().getExtras();
-        hospitalF2 = bundle.getString("hospitalF2");
-        tvVDRNomeResult.setText(hospitalF2);
+        localF2 = bundle.getString("localF2");
+        tvVDRNomeResult.setText(localF2);
 
-        String nometosearch = hospitalF2.replaceAll("[ ]", "%20");
+        String nometosearch = localF2.replaceAll("[ ]", "%20");
+        Log.d("TAG","aaaa" );
 
 
 
@@ -99,7 +99,7 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
         ////////////////////////////////////////
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="https://dkvox.ngrok.io/qservices/detalhes.php?token=&nomehospital="+nometosearch;
+        String url ="https://dkvox.com.br/AMBIENTETESTE/SD/verdetalhes.php?local="+localF2;
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>()
@@ -107,53 +107,39 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
             @Override
             public void onResponse(String response)
             {
+                dados = response.split(",");
+
                 try
                 {
-                    JSONObject jObject = new JSONObject(response);
-                    //Log.d("TAG","" + jObject);
+                    //SET poluicao
+                    tvVDPoluicao.setText(dados[0]);
 
+                    //SET tvVDTransito
+                    tvVDTransito.setText(dados[1]);
 
-                    //SET Endereço
-                    tvVDREnderecoResult.setText(jObject.getString("endereco"));
+                    //SET tvVDAlagamento
+                    tvVDAlagamento.setText(dados[2]);
 
-                    //SET Tempo de Espera
-                            tvVDRTempoesperaResult.setText(jObject.getString("poluicao"));
+                    //SET tvVDInundacoes
+                    tvVDInundacoes.setText(dados[3]);
 
-                    //SET Nota Geral
-                            tvVDRNotageralResult.setText(jObject.getString("notageral"));
+                    //SET tvVDDesmatamento
+                    tvVDDesmatamento.setText(dados[4]);
 
-                            //Cor que a Nota Geral será exibida
-                            if (Float.parseFloat(jObject.getString("notageral")) >= 7)
-                            {
-                                //Verde
-                                tvVDRNotageralResult.setTextColor(Color.parseColor("#048823"));
-                            }
-                            else
-                                if (Float.parseFloat(jObject.getString("notageral")) >= 5)
-                                {
-                                    //Amarelo
-                                    tvVDRNotageralResult.setTextColor(Color.parseColor("#A99E00"));
-                                }
-                                else
-                                    {
-                                        //Vermelho
-                                        tvVDRNotageralResult.setTextColor(Color.parseColor("#A91F00"));
-                                    }
-
-
-                    //Trata endereço do hospital pra ser utilizado nas Uri's
-                    String hospcomplete = jObject.getString("endereco")+","+ jObject.getString("uf");
-                    String hospend = hospcomplete.replace(" ","%20");
+                    /*
+                    //Trata endereço do local pra ser utilizado nas Uri's
+                    String loccomplete = jObject.getString("endereco")+","+ jObject.getString("uf");
+                    String locend = loccomplete.replace(" ","%20");
 
                     //Variavel usada na Intent do Google Maps
-                    gmapsIntentUri = Uri.parse("https://www.google.com/maps/dir/?api=1&destination="+hospend+"&travelmode=walking");
+                    gmapsIntentUri = Uri.parse("https://www.google.com/maps/dir/?api=1&destination="+locend+"&travelmode=walking");
 
                     //Variavel usada na Intent do Waze
-                    wazeIntentUri = Uri.parse("https://waze.com/ul?q="+hospend+"&navigate=yes");
-
+                    wazeIntentUri = Uri.parse("https://waze.com/ul?q="+locend+"&navigate=yes");
+                    */
                     vdCarregando.setVisibility(View.GONE);
                 }
-                catch (JSONException e)
+                catch (Exception e)
                 {
                     e.printStackTrace();
                 }
