@@ -247,9 +247,10 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
                 //  Log de onClick  //
                 //Log.d("tag","onClick no ivMaps");
 
-                Intent intentivMaps = new Intent(Intent.ACTION_VIEW, gmapsIntentUri);
-                intentivMaps.setPackage("com.google.android.apps.maps");
-                startActivity(intentivMaps);
+                //Intent intentivMaps = new Intent(Intent.ACTION_VIEW, gmapsIntentUri);
+                //intentivMaps.setPackage("com.google.android.apps.maps");
+                //startActivity(intentivMaps);
+                Toast.makeText(activity_verdetalhes.this, "Ainda em desenvolvimento.\nPor favor tente novamente mais tarde.", Toast.LENGTH_LONG).show();
                 break;
 
 
@@ -258,9 +259,10 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
                 //  Log de onClick  //
                 //Log.d("tag","onClick no tvMaps");
 
-                Intent intenttvMaps = new Intent(Intent.ACTION_VIEW, gmapsIntentUri);
-                intenttvMaps.setPackage("com.google.android.apps.maps");
-                startActivity(intenttvMaps);
+                //Intent intenttvMaps = new Intent(Intent.ACTION_VIEW, gmapsIntentUri);
+                //intenttvMaps.setPackage("com.google.android.apps.maps");
+                //startActivity(intenttvMaps);
+                Toast.makeText(activity_verdetalhes.this, "Ainda em desenvolvimento.\nPor favor tente novamente mais tarde.", Toast.LENGTH_LONG).show();
                 break;
 
 
@@ -269,8 +271,9 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
                 //  Log de onClick  //
                 //Log.d("tag","onClick no ivWaze");
 
-                Intent intentivWaze = new Intent(Intent.ACTION_VIEW, wazeIntentUri);
-                startActivity(intentivWaze);
+                //Intent intentivWaze = new Intent(Intent.ACTION_VIEW, wazeIntentUri);
+                //startActivity(intentivWaze);
+                Toast.makeText(activity_verdetalhes.this, "Ainda em desenvolvimento.\nPor favor tente novamente mais tarde.", Toast.LENGTH_LONG).show();
                 break;
 
 
@@ -279,8 +282,9 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
                 //  Log de onClick  //
                 //Log.d("tag","onClick no tvWaze");
 
-                Intent intenttvWaze = new Intent(Intent.ACTION_VIEW, wazeIntentUri);
-                startActivity(intenttvWaze);
+                //Intent intenttvWaze = new Intent(Intent.ACTION_VIEW, wazeIntentUri);
+                //startActivity(intenttvWaze);
+                Toast.makeText(activity_verdetalhes.this, "Ainda em desenvolvimento.\nPor favor tente novamente mais tarde.", Toast.LENGTH_LONG).show();
                 break;
         }
     }
