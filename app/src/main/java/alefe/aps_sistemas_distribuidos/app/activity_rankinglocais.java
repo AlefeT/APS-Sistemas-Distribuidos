@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -20,12 +21,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 public class activity_rankinglocais extends AppCompatActivity implements View.OnClickListener
 {
     ProgressBar pbCarregando;
+    String lista[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -62,7 +61,7 @@ public class activity_rankinglocais extends AppCompatActivity implements View.On
 
 
         //////////////////////////////////
-        //  Mostrar Top 15 de Locais    //
+        //  Mostrar Top 10 de Locais    //
         //////////////////////////////////
 
         //pega tamanho da tela
@@ -72,7 +71,7 @@ public class activity_rankinglocais extends AppCompatActivity implements View.On
 
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="http://dkvox.ngrok.io/qservices/ranking.php?token=";
+        String url ="https://dkvox.com.br/AMBIENTETESTE/SD/rankinglocais.php";
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>()
@@ -80,18 +79,15 @@ public class activity_rankinglocais extends AppCompatActivity implements View.On
             @Override
             public void onResponse(String response)
             {
-                //Log.d("TAG", response);
+                lista = response.split(",");
+
                 try
                 {
-                    //Criando um objeto JSON para receber a resposta
-                    JSONObject jObject = new JSONObject(response);
-                    //Log.d("TAG","JSON was successfully received and converted.");
-
                     //Indicando o TableLayout que está no layout
                     TableLayout ll = findViewById(R.id.tlRankLista);
 
                     //gera rank
-                    int qtdeRanking = 16;
+                    int qtdeRanking = 11;
                     for (int i = 0; i < qtdeRanking; i++)
                     {
                         if (i == 0)
@@ -138,10 +134,7 @@ public class activity_rankinglocais extends AppCompatActivity implements View.On
                         {
                             String accuratenum = String.valueOf(i);
                             String localnum = "local" + accuratenum;
-                            //Log.d("TAG",localnum);
-                            //Log.d("TAG",jObject.getJSONObject(localnum).getString("nome"));
-                            String rankatual = "rank" + i;
-                            //Log.d("TAG", rankatual);
+
                             //Adicionando um novo row a table layout
                             TableRow row = new TableRow(activity_rankinglocais.this);
                             TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
@@ -153,7 +146,8 @@ public class activity_rankinglocais extends AppCompatActivity implements View.On
                             qty.setTextSize(15);
                             qty.setMaxLines(1);
                             TextView qty2 = new TextView(activity_rankinglocais.this);
-                            qty2.setText(jObject.getJSONObject(localnum).getString("nome"));
+                            int j = i - 1;
+                            qty2.setText(lista[j]);
                             qty2.setTextColor(Color.parseColor("#000000"));
                             qty2.setPadding(12, 0, 8, 20);
                             qty2.setTextSize(15);
@@ -161,12 +155,13 @@ public class activity_rankinglocais extends AppCompatActivity implements View.On
                             qty2.setMaxLines(2);
                             ImageView qty3 = new ImageView(activity_rankinglocais.this);
                             TextView qty4 = new TextView(activity_rankinglocais.this);
-                            if (Float.parseFloat(jObject.getJSONObject(localnum).getString("notageral")) >= 7.0f)
+                            int k = i + 9;
+                            if (Float.parseFloat(lista[k]) >= 7.0f)
                             {
                                 qty3.setImageResource(R.drawable.ic_stargreen);
                                 qty4.setTextColor(Color.parseColor("#048823"));
                             }
-                            else if (Float.parseFloat(jObject.getJSONObject(localnum).getString("notageral")) >= 5.0f)
+                            else if (Float.parseFloat(lista[k]) >= 5.0f)
                             {
                                 qty3.setImageResource(R.drawable.ic_staryellow);
                                 qty4.setTextColor(Color.parseColor("#A99E00"));
@@ -178,7 +173,7 @@ public class activity_rankinglocais extends AppCompatActivity implements View.On
                             }
                             qty3.setPadding(8, 0, 0, 20);
                             qty3.setMaxWidth(40);
-                            qty4.setText(jObject.getJSONObject(localnum).getString("notageral"));
+                            qty4.setText(lista[k]);
                             qty4.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
                             qty4.setPadding(0, 0, 32, 20);
                             qty4.setTextSize(15);
@@ -188,7 +183,7 @@ public class activity_rankinglocais extends AppCompatActivity implements View.On
                             row.addView(qty3);
                             row.addView(qty4);
                             ll.addView(row, i);
-                            if (i == 15)
+                            if (i == 10)
                             {
                                 pbCarregando.setVisibility(View.GONE);
                             }
@@ -220,7 +215,7 @@ public class activity_rankinglocais extends AppCompatActivity implements View.On
                     row.addView(qty4);
                     ll.addView(row, 16);
                 }
-                catch (JSONException e)
+                catch (Exception e)
                 {
                     e.printStackTrace();
                 }
@@ -232,8 +227,7 @@ public class activity_rankinglocais extends AppCompatActivity implements View.On
             @Override
             public void onErrorResponse(VolleyError error)
             {
-                //Display an error if the connection failed
-                //Log.e("TAG","Volley connection miserably failed.");
+                //Log.e("TAG","Conexao falhou.");
                 Toast.makeText(activity_rankinglocais.this, "Erro ao se conectar com o servidor.\nPor favor verifique sua conexão ou tente novamente mais tarde.", Toast.LENGTH_LONG).show();
 
             }

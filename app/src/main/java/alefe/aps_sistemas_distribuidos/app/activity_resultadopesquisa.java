@@ -202,7 +202,7 @@ public class activity_resultadopesquisa extends AppCompatActivity implements Vie
             public void onErrorResponse(VolleyError error)
             {
                 //Display an error if the connection failed
-                Log.e("TAG","Volley connection miserably failed.");
+                //Log.e("TAG","Conexao falhou.");
                 Toast.makeText(activity_resultadopesquisa.this, "Erro ao se conectar com o servidor.\nPor favor verifique sua conexão ou tente novamente mais tarde.", Toast.LENGTH_LONG).show();
                 tvRPNenhumencontrado.setText("Erro ao se conectar com o servidor.\nPor favor verifique sua conexão ou tente novamente em alguns instantes.");
                 tvRPNenhumencontrado.setVisibility(View.VISIBLE);

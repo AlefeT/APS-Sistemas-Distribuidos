@@ -1,7 +1,6 @@
 package alefe.aps_sistemas_distribuidos.app;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,8 +17,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
 
 public class activity_verdetalhes extends AppCompatActivity implements View.OnClickListener
 {
@@ -89,10 +86,6 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
         localF2 = bundle.getString("localF2");
         tvVDRNomeResult.setText(localF2);
 
-        String nometosearch = localF2.replaceAll("[ ]", "%20");
-        Log.d("TAG","aaaa" );
-
-
 
         ////////////////////////////////////////
         //CONEXÃO VOLLEY COM O BANCO DE DADOS //
@@ -126,17 +119,17 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
                     //SET tvVDDesmatamento
                     tvVDDesmatamento.setText(dados[4]);
 
-                    /*
+
                     //Trata endereço do local pra ser utilizado nas Uri's
-                    String loccomplete = jObject.getString("endereco")+","+ jObject.getString("uf");
+                    String loccomplete = dados[5] + ", " + dados[6] + ",SP";
                     String locend = loccomplete.replace(" ","%20");
 
-                    //Variavel usada na Intent do Google Maps
+                    //Variavel usada na Intent do Google Maps //endereco ex.="Av. Albert Einstein, 627" //uf ex.="SP"
                     gmapsIntentUri = Uri.parse("https://www.google.com/maps/dir/?api=1&destination="+locend+"&travelmode=walking");
 
                     //Variavel usada na Intent do Waze
                     wazeIntentUri = Uri.parse("https://waze.com/ul?q="+locend+"&navigate=yes");
-                    */
+
                     vdCarregando.setVisibility(View.GONE);
                 }
                 catch (Exception e)
@@ -150,8 +143,7 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
             @Override
             public void onErrorResponse(VolleyError error)
             {
-                //Display an error if the connection failed
-                //Log.e("TAG","Volley connection miserably failed.");
+                //Log.e("TAG","Conexao falhou.");
                 Toast.makeText(activity_verdetalhes.this, "Erro ao se conectar com o servidor.\nPor favor verifique sua conexão ou tente novamente mais tarde.", Toast.LENGTH_LONG).show();
             }
         });
@@ -247,10 +239,9 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
                 //  Log de onClick  //
                 //Log.d("tag","onClick no ivMaps");
 
-                //Intent intentivMaps = new Intent(Intent.ACTION_VIEW, gmapsIntentUri);
-                //intentivMaps.setPackage("com.google.android.apps.maps");
-                //startActivity(intentivMaps);
-                Toast.makeText(activity_verdetalhes.this, "Ainda em desenvolvimento.\nPor favor tente novamente mais tarde.", Toast.LENGTH_LONG).show();
+                Intent intentivMaps = new Intent(Intent.ACTION_VIEW, gmapsIntentUri);
+                intentivMaps.setPackage("com.google.android.apps.maps");
+                startActivity(intentivMaps);
                 break;
 
 
@@ -259,10 +250,9 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
                 //  Log de onClick  //
                 //Log.d("tag","onClick no tvMaps");
 
-                //Intent intenttvMaps = new Intent(Intent.ACTION_VIEW, gmapsIntentUri);
-                //intenttvMaps.setPackage("com.google.android.apps.maps");
-                //startActivity(intenttvMaps);
-                Toast.makeText(activity_verdetalhes.this, "Ainda em desenvolvimento.\nPor favor tente novamente mais tarde.", Toast.LENGTH_LONG).show();
+                Intent intenttvMaps = new Intent(Intent.ACTION_VIEW, gmapsIntentUri);
+                intenttvMaps.setPackage("com.google.android.apps.maps");
+                startActivity(intenttvMaps);
                 break;
 
 
@@ -271,9 +261,8 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
                 //  Log de onClick  //
                 //Log.d("tag","onClick no ivWaze");
 
-                //Intent intentivWaze = new Intent(Intent.ACTION_VIEW, wazeIntentUri);
-                //startActivity(intentivWaze);
-                Toast.makeText(activity_verdetalhes.this, "Ainda em desenvolvimento.\nPor favor tente novamente mais tarde.", Toast.LENGTH_LONG).show();
+                Intent intentivWaze = new Intent(Intent.ACTION_VIEW, wazeIntentUri);
+                startActivity(intentivWaze);
                 break;
 
 
@@ -282,9 +271,8 @@ public class activity_verdetalhes extends AppCompatActivity implements View.OnCl
                 //  Log de onClick  //
                 //Log.d("tag","onClick no tvWaze");
 
-                //Intent intenttvWaze = new Intent(Intent.ACTION_VIEW, wazeIntentUri);
-                //startActivity(intenttvWaze);
-                Toast.makeText(activity_verdetalhes.this, "Ainda em desenvolvimento.\nPor favor tente novamente mais tarde.", Toast.LENGTH_LONG).show();
+                Intent intenttvWaze = new Intent(Intent.ACTION_VIEW, wazeIntentUri);
+                startActivity(intenttvWaze);
                 break;
         }
     }

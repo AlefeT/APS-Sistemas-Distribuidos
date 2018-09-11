@@ -1,7 +1,6 @@
 package alefe.aps_sistemas_distribuidos.app;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -121,8 +120,8 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
             @Override
             public void onErrorResponse(VolleyError error)
             {
-                //Display an error if the connection failed
-                //Log.e("TAG","Volley connection miserably failed.");
+                //Log.e("TAG","Conexao falhou.");
+                Toast.makeText(activity_pesquisarlocais.this, "Erro ao se conectar com o servidor.\nPor favor verifique sua conexão ou tente novamente mais tarde.", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -254,7 +253,7 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
         @Override
         public boolean isValid(CharSequence text)
         {
-            //Log.v("tag", "Checking if local valid: " + text);
+            //Log.v("tag", "Checa se local e valido: " + text);
             Arrays.sort(locais);
             if (Arrays.binarySearch(locais, text.toString()) > 0)
             {
@@ -266,7 +265,7 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
         @Override
         public CharSequence fixText(CharSequence invalidText)
         {
-            //Log.v("tag", "Returning hospital fixed text");
+            //Log.v("tag", "Limpa o nome do local");
             tvPLLocalinv.setVisibility(View.VISIBLE);
             actvPLLocal.setText("");
             return "";
@@ -279,10 +278,10 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
         @Override
         public void onFocusChange(View v, boolean hasFocus)
         {
-            //Log.v("tag", "Focus changed");
+            //Log.v("tag", "O foco mudou.");
             if (v.getId() == R.id.actvPLLocal && !hasFocus)
             {
-                //Log.v("tag", "Performing local validation");
+                //Log.v("tag", "Fazendo validacao local.");
                 ((AutoCompleteTextView) v).performValidation();
             }
         }
@@ -368,12 +367,7 @@ public class activity_pesquisarlocais extends AppCompatActivity implements View.
                     String desmatamentoF = selectedDesmatamentoText.replaceAll("[ ]", "%20");
 
                     //LOG pra verificar valores finais
-                    /*Log.d("tag", ", localF: " + localF
-                            + ", poluicaoF: " + poluicaoF
-                            + ", transitoF: " + transitoF
-                            + ", alagamentoF: " + alagamentoF
-                            + ", inundacaoF: " + inundacaoF
-                            + ", desmatamentoF: " + desmatamentoF);*/
+                    //Log.d("tag", ", localF: " + localF + ", poluicaoF: " + poluicaoF + ", transitoF: " + transitoF + ", alagamentoF: " + alagamentoF + ", inundacaoF: " + inundacaoF + ", desmatamentoF: " + desmatamentoF);
 
 
                     //SE NÃO TIVER NENHUM FILTRO ESPECIFICADO, AVISAR E NÃO BUSCAR:
