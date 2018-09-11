@@ -12,8 +12,8 @@ android {
         applicationId "alefe.aps_sistemas_distribuidos.app"
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 202
-        versionName "2.02"
+        versionCode 17
+        versionName "1.7"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
